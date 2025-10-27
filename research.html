@@ -109,7 +109,7 @@ th {
 
 <tr>
 <td> <a href="#dataai">Data and AI</a></td><td> Computer Vision</td> <td> <a href="#bioinspired"> Bioinspired Memory models</a> </td> <td> <a href="#cancers">Representation learning</a></td><td> <a href="#compression">Vector compression</a> </td><td> Knowledge representation & Semantic Web</td> <td> Document analysis</td><td>Multimedia Search & Retrieval</td><td><a href="#factcheck">Fact-checking </a></td></tr>
-<tr><td> <a href="#health">Healthcare AI</a></td><td>Multimodal fusion </td> <td> Digital twins </td> <td> Chest X-rays</td> <td> Interventional AI</td> <td> Cardiovascular imaging</td> <td> Brain imaging </td> <td> Cancers</td><td> Clinical decision support </td></tr>
+<tr><td> <a href="#health">Healthcare AI</a></td><td><a href="#cancers">Multimodal fusion </a></td> <td><a href="#cancers"> Digital twins </a></td> <td> <a href="#chest">Chest X-rays</a></td> <td> <a href="#interventional">Interventional AI</a></td> <td> <a href="#cardio">Cardiovascular imaging</a></td> <td><a href="#brain"> Brain imaging</a> </td> <td> <a href="#cancers"> Cancers</a></td><td> Clinical decision support </td></tr>
 <tr>
 </table>
 <div>
@@ -125,7 +125,7 @@ My current work in AI covers the following topics:
   <li> Multimodal RAG Search </li>
   <li> <a href="#compression">Compression in vector databases</a></li>
    <li> Rethinking relational and vector databases </li>
-    <li><a href="#bioinspired"> Bioinspired epsiodic and semantic memory models (VLM, SemCLIP)</a> </li>
+    <li><a href="#bioinspired"> Bioinspired episodic and semantic memory models (VLM, SemCLIP)</a> </li>
    <li> <a href="#crossmodal">Cross-modal Hopfield networks</a></li>
    <li> <a href="#factcheck">Fact-checking of generative AI</a></li>
   </ul>
@@ -143,7 +143,7 @@ Topics explored in earlier eras include:
 
 <h3 id="factcheck"> Fact-checking generative AI</h3>
 
-Despited the promise of generative AI in report generation, retaining factual correctness with minimal hallucinations has been challenging. Current methods of hallucination reduction such as DPO and PPO are applied at training or fine-tuning. Currently, there aren't many methods available at inference time to fact-check generative AI in a manner independent of the underlying generative AI. We have been developing fact-checking models for generated reports from imaging data. We are also developing methods to correct such reports with the help of language models. The key idea here is to generate a synthetic data designed to elicit the broad class of errors made by generative AI models and use this train a fact-checking model. We are also working on an automatic report correction method that uses both image and textual information in automated reports to spot identity and location errors of concepts mentioned through the use of fact-checking models. Promising results are already being seein in X-ray datasets.
+Despite the promise of generative AI in report generation, retaining factual correctness with minimal hallucinations has been challenging. Current methods of hallucination reduction such as DPO and PPO are applied at training or fine-tuning. Currently, there aren't many methods available at inference time to fact-check generative AI in a manner independent of the underlying generative AI. We have been developing fact-checking models for generated reports from imaging data. We are also developing methods to correct such reports with the help of language models. The key idea here is to generate a synthetic data designed to elicit the broad class of errors made by generative AI models and use this train a fact-checking model. We are also working on an automatic report correction method that uses both image and textual information in automated reports to spot identity and location errors of concepts mentioned through the use of fact-checking models. Promising results are already being seen in X-ray datasets.
 <ul>
   <li>R. Mahmood, P. Yan, Tanveer Syeda-Mahmood, “Automatic Correction of AI Reports using Fact-Checking Model-guided LLMs,” in Proc. NeurIPS Workshop on GenAI for Health: Potential, Trust, and Policy Compliance, Dec. 6, 2025.</li>
 <li>R. Mahmood, Diego Machado-Reyes, Joy Wu, Parisa Kaviani, Ken C.L. Wong, Niharika D'Souza, Mannudeep Kalra, Ge Wang, Pingkun Yan, Tanveer Syeda-Mahmood, “Phrase-grounded Fact-checking for Automatically Generated Chest X-ray Reports,” in Proc. Medical Imaging and Computer-Assisted Intervention (MICCAI), Sept. 2025.</li>
@@ -152,7 +152,7 @@ Despited the promise of generative AI in report generation, retaining factual co
 </ul>
 <h3 id="compression"> Compression in vector databases</h3>
 
-Vector databases have become ubiquitous in the era of generative AI for enabling semantic search for downstream use in general search,  LLM-based chatbots, and retrieval augmented generation (RAG) of context-sensitive responses. When such databases are used to house all of an orgnanization's vectorized data, this leads to excess storage increase, particularly for large size embeddings. Applying compression methods, however, is known to lower the quality of search by as much as 50%. 
+Vector databases have become ubiquitous in the era of generative AI for enabling semantic search for downstream use in general search,  LLM-based chatbots, and retrieval augmented generation (RAG) of context-sensitive responses. When such databases are used to house all of an organization's vectorized data, this leads to excess storage increase, particularly for large size embeddings. Applying compression methods, however, is known to lower the quality of search by as much as 50%. 
 Developing techniques for vector compression that preserve the accuracy of an uncompressed data search while still reducing the memory and storage footprint are desirable. In our research, we are developing such methods both within the product quantization (PQ) formulation as well as using binary quantization frameworks. We show that among all permutation transformations, the sorting transformation minimizes L2 distance and maximizes similarity measures such as cosine similarity and Pearson correlation for vector data. Applying sorting transformation with vector quantization can substantially reduce compression errors, and offer search performance comparable to uncompressed search. The small overhead in storage for the sorting permutation is balanced by the reduction in the number of clusters due to the sorting transformation. Our papers on this topic:
 <ul>
   <li> H. Wang and T. Syeda-Mahmood, “Vector data search with sorting transformation,” in ICML Workshop on Vector Databases, Vancouver, July 18, 2025.</li>
@@ -193,7 +193,7 @@ The work in clinical decision support can be grouped the work done over the year
   <li><a href="#cardio">Cardiovascular imaging</a></li>
   <li> <a href="#chest">Chest X-rays</a></li>
   <li> <a href="#brain">Brain imaging</a></li>
-  <li> <a href="#cancers">Multimodal fusion for cancers and other diseaes</a></li>
+  <li> <a href="#cancers">Multimodal fusion for cancers and other diseases</a></li>
   <li> <a href="#interventional">Precision AI for interventional imaging</a></li>
   <li> Healthcare informatics </li>
   <li> Digital twins</li>
@@ -280,60 +280,84 @@ While question answering in exam taking scenarios was a quantitative way to show
 </p>
 
 Representative publications in chest X-ray radiology:
+<h4> Radiology report generation and verification</h4>
 <ul>
 <li> R. Mahmood, Diego Machado-Reyes, Joy Wu, Parisa Kaviani, Ken C.L. Wong, Niharika D'Souza, Mannudeep Kalra, Ge Wang, Pingkun Yan, Tanveer Syeda-Mahmood, “Phrase-grounded Fact-checking for Automatically Generated Chest X-ray Reports,” in Proc. Medical Imaging and Computer-Assisted Intervention (MICCAI), 2025.</li>
 <li> T. Syeda-Mahmood, and L. Shi. "Searching for Fine-Grained Queries in Radiology Reports Using Similarity-Preserving Contrastive Embedding." In Jl. Of Machine Learning Research, vol.182:1–15, 2022. (IF=4.09)</li>
 <li>  L. Shi, T. Syeda-Mahmood, T. Baldwin, “Improving Neural Models for Radiology Report Retrieval with Lexicon-based Automated Annotation,” in Proc. 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL), 2022.</li>
+<li>  T. Syeda-Mahmood, K. C. L. Wong, Y. Gur, J. T. Wu, Ashutosh Jadhav, A. Karargyris, A. Pillai, A. Sharma, A. Syed, O. Boyko, M. Moradi, "Chest X-ray Report Generation through fine-grained label learning," in Proc. Medical Imaging and Computer-Assisted Interaction, pp.561-571, (MICCAI 2020). </li>
+</ul>
+<h4> Finding classification models</h4>
+<ul>
 <li>  N. Srivathsa, R. Mahmood, T. Syeda-Mahmood, “Spatially preserving flattening for location-aware classification of findings in chest X-rays,” in Proc. ISBI 2022</li>
-<li>  J. Wu, K. C. L. Wong, Y. Gur, N. Ansari, A. Karargyris, A.Sharma, M. Morris, B. Sabury, H. Ahmad, O. Boyko, A. Syed, A. Jadhav, H. Wang, A. Pillai, S. Kashyap, M. Moradi, T. Syeda-Mahmood, "Artificial Intelligence versus Entry-level Radiologists for Full-fledged Preliminary Read of Frontal AP Chest Radiographs: A Comparative Study", Journal of American Medical Informatics Association, (JAMA) Network, October 9, 2020. (IF=13.35)</li>
-<li>  T. Syeda-Mahmood, “Role of Big Data and Machine Learning in Diagnostic Decision Support in Radiology”, Journal of the American College of Radiology, 15(3), 569-576, 2018. (IF=5.3)
-<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, “Semantic Expansion of Clinician Generated Data Preferences for Automatic Patient Data Summarization”, AMIA 2021.</li>
-<li> Tanveer Syeda-Mahmood, Ken C. L. Wong, Joy T. Wu, Ashutosh Jadhav, Orest Boyko, Extracting and Learning Fine-grained Labels from Chest Radiographs, AMIA Annual Symposium, (AMIA) 2020. Won the Homer Warner Award for outstanding contribution to the field of biomedical informatics. </li>
-<li> J. Wu, K. C. L. Wong, Y. Gur, N. Ansari, A. Karargyris, A.Sharma, M. Morris, B. Sabury, H. Ahmad, O. Boyko, A. Syed, A. Jadhav, H. Wang, A. Pillai, S. Kashyap, M. Moradi, T. Syeda-Mahmood, "Artificial Intelligence versus Entry-level Radiologists for Full-fledged Preliminary Read of Frontal AP Chest Radiographs: A Comparative Study", Journal of American Medical Informatics Association, (JAMA) Network, October 9, 2020.</li>
-<li>  T. Syeda-Mahmood, K. C. L. Wong, Y. Gur, J. T. Wu, Ashutosh Jadhav, A. Karargyris, A. Pillai, A. Sharma, A. Syed, O. Boyko, M. Moradi, "Chest X-ray Report Generation through fine-grained label learning," in Proc. Medical Imaging and Computer-Assisted Interaction, pp.561-571, (MICCAI 2020). 
-<li> A. Jadhav, K. C. L. Wong, J. Wu, M. Moradi, T. Syeda-Mahmood. "Combining Deep Learning and Knowledge-driven Reasoning for Chest X-Ray Findings Detection" in Proc. American Medical Informatics Association Annual Symposium 2020 (AMIA 2020). </li>
-<li>  J. T. Wu, A. Syed, H. Ahmad, A. Pillai, Y. Gur, A. Jadhav, D. Gruhl, L. Kato, M. Moradi, T. Syeda-Mahmood, “AI Accelerated Human-in-the-loop Structuring of Radiology Reports,” AMIA Annual Symposium 2020.</li>
 <li>  K. C. L. Wong, M. Moradi, J. Wu, A. Pillai, A. Sharma, Y. Gur, H. Ahmad, M. S. l Chowdary, J. Chiranjeevi, K. K. Reddy P., W. Venkateswar, D. C Reddy, T. Syeda-Mahmood, "A robust network architecture to detect normal chest X-ray radiographs," in Proc. (ISBI) 2020.</li>
-<li> Karina Kanjaria, Anup Pillai, Chaitanya Shivade, Marina Bendersky, Vandana Mukherjee and Tanveer Syeda-Mahmood, “Receptivity of an AI Cognitive Assistant by the Radiology Community: A Report on Data Collected at RSNA,” Best Industrial Paper Award at International Conference on Healthcare Informatics (part of BIOSTEC 2020). </li>
-<li>  J. T. Wu, Y. Gur, A. Karargyris, A.B. Syed, O. Boyko, M. Moradi, T. Syeda-Mahmood, "Automatic Bounding Box Annotation of Chest X-Ray Data for Localization of Abnormalities," in Proc. ISBI 2020</li>
-<li>  S. Kashyap, A. Karargyris, Joy T. Wu, Y. Gur, A. Sharma, K. C.L. Wong, M. Moradi, T. Syeda-Mahmood, "Looking in the Right Place for Anomalies: Explainable AI Through Automatic Location Learning," in Proc. ISBI 2020.</li>
-<li>  V. Subramanian, M. Do, T. Syeda-Mahmood, "Multimodal Fusion of Imaging and Genomics for Lung Cancer Recurrence Prediction," in Proc. ISBI 2020</li>
-<li>  J. Francis, H. Wang, K. White, T. Syeda-Mahmood, R. Stevens, "Neural Network Segmentation of Cell Ultrastructure Using Incomplete Annotation," in Proc. ISBI 2020.</li>
-<li>  J. T. Wu, Y. Gur, A. Karargyris, A.B. Syed, O. Boyko, M. Moradi, T. Syeda-Mahmood, "Automatic Bounding Box Annotation of Chest X-Ray Data for Localization of Abnormalities," in Proc. ISBI 2020</li>
-<li>  S. Kashyap, A. Karargyris, Joy T. Wu, Y. Gur, A. Sharma, K. C.L. Wong, M. Moradi, T. Syeda-Mahmood, "Looking in the Right Place for Anomalies: Explainable AI Through Automatic Location Learning," in Proc. ISBI 2020.</li>
+<li>  C. Agunwa, Mehdi Moradi, Ken C.L. Wong, T. Syeda-Mahmood, “Body Part and Imaging Modality Classification for a General Radiology Cognitive Assistant”, SPIE Medical Imaging 2019.</li>
+<li>  M. Moradi, K. C. L. Wong, A. Karargyris, and T. Syeda-Mahmood, "Quality controlled segmentation to aid disease detection",  in SPIE Medical Imaging 2020. </li>
 <li>  A. Karargyris, K. C. L. Wong, Joy T Wu, M. Moradi, T. Syeda-Mahmood, "Boosting the rule-out accuracy of deep disease detection using class weight modifiers", IEEE ISBI 2019. </li>
-<li>  T. Syeda-Mahmood, H. M Ahmad, N. Ansari, Yaniv Gur, Satyananda Kashyap, Alexandros Karargyris, Mehdi Moradi, Anup Pillai, Karthik Sheshadri, Weiting Wang, Ken CL Wong, Joy T Wu, "Building a Benchmark Dataset and Classifiers for Sentence-Level Findings in AP Chest X-rays", IEEE ISBI 2019</li>
 <li> A. Harouni, H. Wang, T. Syeda-Mahmood, David Beymer, "Deep Network Anatomy Segmentation with Limited Annotations Using Auxiliary Labels", IEEE ISBI 2019.</li>
 <li>  S. Kashyap, M. Moradi, A. Karargyris, Joy T Wu, M. Morris, B. Saboury, E. Siegel, T. Syeda-Mahmood, “Artificial Intelligence for Point of Care Radiograph Quality Assessment”, SPIE Medical Imaging 2019.</li>
 <li>  C. Agunwa, Mehdi Moradi, Ken C.L. Wong, T. Syeda-Mahmood, “Body Part and Imaging Modality Classification for a General Radiology Cognitive Assistant”, SPIE Medical Imaging 2019.</li>
-<li>  M. Moradi, K. C. L. Wong, A. Karargyris, and T. Syeda-Mahmood, "Quality controlled segmentation to aid disease detection", To appear in SPIE Medical Imaging 2020. </li>
 <li>  K. C. L Wong, M. Moradi, J. Wu, T. Syeda-Mahmood, “Identifying disease-free chest x-ray images with deep transfer learning”, SPIE Medical Imaging 2019: Computer-Aided Diagnosis.</li>
 <li>  A Karargyris, S Kashyap, JT Wu, A Sharma, M. Moradi, T Syeda-Mahmood, “Age prediction using a large chest x-ray dataset”, SPIE Medical Imaging 2019: Computer-Aided Diagnosis. </li>
-<li>  A. Harouni, H. Wang, T. Syeda-Mahmood, and D. Beymer. "Deep Network Anatomy Segmentation with Limited Annotations using Auxiliary Labels." In 2019 IEEE 16th International Symposium on Biomedical Imaging (ISBI 2019), pp. 6-10. IEEE, 2019.</li>
-<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Automatic extraction of structured radiology reports". Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. (Oral presentation)</li>
-<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Knowledge-driven approach to boost the performance of solely image-based deep learning models" Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. </li>
-<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, "Automatic Patient Data Summarization for Radiologist", RSNA 2019.</li>
-<li>  T. Syeda-Mahmood, J. Wu, M. Morris, B. Sabury, "Automatic structuring of radiology reports, “RSNA 2019.</li>
-<li>  V. Subramanian, H. Wang, Joy Wu, K. CL Wong, A. Sharma, T. Syeda-Mahmood, "Automated detection and type classification of central venous catheters in chest X-rays", MICCAI 2019.</li>
-<li>  T. Syeda-Mahmood, H. M Ahmad, N. Ansari, Yaniv Gur, Satyananda Kashyap, Alexandros Karargyris, Mehdi Moradi, Anup Pillai, Karthik Sheshadri, Weiting Wang, Ken CL Wong, Joy T Wu, "Building a Benchmark Dataset and Classifiers for Sentence-Level Findings in AP Chest X-rays", IEEE ISBI 2019</li>
-<li>  S. Kashyap, M. Moradi, A. Karargyris, Joy T Wu, M. Morris, B. Saboury, E. Siegel, T. Syeda-Mahmood, “Artificial Intelligence for Point of Care Radiograph Quality Assessment”, SPIE Medical Imaging 2019.</li>
-<li>  C. Agunwa, Mehdi Moradi, Ken C.L. Wong, T. Syeda-Mahmood, “Body Part and Imaging Modality Classification for a General Radiology Cognitive Assistant”, SPIE Medical Imaging 2019.</li>
-<li>  M. Moradi, K. C. L. Wong, A. Karargyris, and T. Syeda-Mahmood, "Quality controlled segmentation to aid disease detection", To appear in SPIE Medical Imaging 2020. </li>
 <li>  K. C. L Wong, M. Moradi, J. Wu, T. Syeda-Mahmood, “Identifying disease-free chest x-ray images with deep transfer learning”, SPIE Medical Imaging 2019: Computer-Aided Diagnosis.</li>
-<li>  A Karargyris, S Kashyap, JT Wu, A Sharma, M. Moradi, T Syeda-Mahmood, “Age prediction using a large chest x-ray dataset”, SPIE Medical Imaging 2019: Computer-Aided Diagnosis. </li>
-<li>  A. Harouni, H. Wang, T. Syeda-Mahmood, and D. Beymer. "Deep Network Anatomy Segmentation with Limited Annotations using Auxiliary Labels." In 2019 IEEE 16th International Symposium on Biomedical Imaging (ISBI 2019), pp. 6-10. IEEE, 2019.</li>
-<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Automatic extraction of structured radiology reports". Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. (Oral presentation)</li>
-<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Knowledge-driven approach to boost the performance of solely image-based deep learning models" Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. </li>
-<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, "Automatic Patient Data Summarization for Radiologist", RSNA 2019.</li>
-<li>  T. Syeda-Mahmood, J. Wu, M. Morris, B. Sabury, "Automatic structuring of radiology reports, “RSNA 2019.</li>
-<li>  A. Pillai, A. Katouzian, A. Jadhav, M. Bendersky. K. Kanjaria, C. Shivade, V. Mukherjee, T. Syeda-Mahmood, “A knowledge-based question answering system to provide cognitive assistance to radiologists”, SPIE Medical Imaging 2019.</li>
-<li> V. Subramanian, H. Wang, Joy Wu, K. CL Wong, A. Sharma, T. Syeda-Mahmood, "Automated detection and type classification of central venous catheters in chest X-rays", MICCAI 2019.</li>
-<li>  T. Syeda-Mahmood, “Role of Big Data and Machine Learning in Diagnostic Decision Support in Radiology”, Journal of the American College of Radiology, 15(3), 569-576, 2018.</li>
 <li> M. Moradi, A. Madani, Y. Guy, Y. Guo, T. Syeda-Mahmood, "Bimodal network architectures for automatic generation of image annotation from text", MICCAI 2018, pp. 449-456.</li>
 <li>  A. Madani, M. Moradi, A. Karargyris, T. Syeda-Mahmood, “Semi-supervised learning with generative adversarial networks for chest X-ray classification with ability of data domain adaptation”, IEEE ISBI 2018.</li>
+
 <li>  Ali Madani, M. Moradi, T. Syeda-Mahmood, A. Karargyris, “Chest x-ray generation and data augmentation for cardiovascular abnormality classification”, SPIE 2018.</li>
-<li>  T. F. Syeda-Mahmood, E. Walach, D. Beymer, F. Gilboa-Solomon, M. Moradi, P. Kisilev, D. Kakrania, C. B. Compas, H. Wang, M. Negahdar, Y. Cao, T. Baldwin, Y. Guo, Y. Gur, D. Rajan, A. Zlotnick, S. Rabinovici-Cohen, R. Ben-Ari, G. Amit, P. Prasanna, J. Morey, O. B. Boyko, S. Y. Hashoul, “Medical sieve: a cognitive assistant for radiologists and cardiologists,” SPIE Medical Imaging: Computer-Aided Diagnosis 2016.</li>
+
 <li>  T. F. Syeda-Mahmood, R. Kumar, C.B. Compas, “Learning the correlation between images and disease labels from reports using ambiguous learning,” Medical Image Computing and Computer-Assisted Intervention, accepted for MICCAI 2015.</li>
+</ul>
+
+<h4> Clinical decision support</h4>
+<ul>
+<li>  J. Wu, K. C. L. Wong, Y. Gur, N. Ansari, A. Karargyris, A.Sharma, M. Morris, B. Sabury, H. Ahmad, O. Boyko, A. Syed, A. Jadhav, H. Wang, A. Pillai, S. Kashyap, M. Moradi, T. Syeda-Mahmood, "Artificial Intelligence versus Entry-level Radiologists for Full-fledged Preliminary Read of Frontal AP Chest Radiographs: A Comparative Study", Journal of American Medical Informatics Association, (JAMA) Network, October 9, 2020. (IF=13.35)</li>
+<li> Karina Kanjaria, Anup Pillai, Chaitanya Shivade, Marina Bendersky, Vandana Mukherjee and Tanveer Syeda-Mahmood, “Receptivity of an AI Cognitive Assistant by the Radiology Community: A Report on Data Collected at RSNA,” Best Industrial Paper Award at International Conference on Healthcare Informatics (part of BIOSTEC 2020). </li>
+<li>  T. Syeda-Mahmood, “Role of Big Data and Machine Learning in Diagnostic Decision Support in Radiology”, Journal of the American College of Radiology, 15(3), 569-576, 2018. (IF=5.3)
+</li>
+
+<li>  A. Pillai, A. Katouzian, A. Jadhav, M. Bendersky. K. Kanjaria, C. Shivade, V. Mukherjee, T. Syeda-Mahmood, “A knowledge-based question answering system to provide cognitive assistance to radiologists”, SPIE Medical Imaging 2019.</li>
+
+<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, "Automatic Patient Data Summarization for Radiologist", RSNA 2019.</li>
+
+<li>  T. F. Syeda-Mahmood, E. Walach, D. Beymer, F. Gilboa-Solomon, M. Moradi, P. Kisilev, D. Kakrania, C. B. Compas, H. Wang, M. Negahdar, Y. Cao, T. Baldwin, Y. Guo, Y. Gur, D. Rajan, A. Zlotnick, S. Rabinovici-Cohen, R. Ben-Ari, G. Amit, P. Prasanna, J. Morey, O. B. Boyko, S. Y. Hashoul, “Medical sieve: a cognitive assistant for radiologists and cardiologists,” SPIE Medical Imaging: Computer-Aided Diagnosis 2016.</li>
+</ul>
+<h4> Clinical knowledge/ text analytics</h4>
+<ul>
+<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, “Semantic Expansion of Clinician Generated Data Preferences for Automatic Patient Data Summarization”, AMIA 2021.</li>
+<li> Tanveer Syeda-Mahmood, Ken C. L. Wong, Joy T. Wu, Ashutosh Jadhav, Orest Boyko, Extracting and Learning Fine-grained Labels from Chest Radiographs, AMIA Annual Symposium, (AMIA) 2020. Won the Homer Warner Award for outstanding contribution to the field of biomedical informatics. </li>
+
+<li> A. Jadhav, K. C. L. Wong, J. Wu, M. Moradi, T. Syeda-Mahmood. "Combining Deep Learning and Knowledge-driven Reasoning for Chest X-Ray Findings Detection" in Proc. American Medical Informatics Association Annual Symposium 2020 (AMIA 2020). </li>
+<li>  J. T. Wu, A. Syed, H. Ahmad, A. Pillai, Y. Gur, A. Jadhav, D. Gruhl, L. Kato, M. Moradi, T. Syeda-Mahmood, “AI Accelerated Human-in-the-loop Structuring of Radiology Reports,” AMIA Annual Symposium 2020.</li>
+<li>  T. Syeda-Mahmood, H. M Ahmad, N. Ansari, Yaniv Gur, Satyananda Kashyap, Alexandros Karargyris, Mehdi Moradi, Anup Pillai, Karthik Sheshadri, Weiting Wang, Ken CL Wong, Joy T Wu, "Building a Benchmark Dataset and Classifiers for Sentence-Level Findings in AP Chest X-rays", IEEE ISBI 2019</li>
+<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Automatic extraction of structured radiology reports". Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. (Oral presentation)</li>
+<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Knowledge-driven approach to boost the performance of solely image-based deep learning models" Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. </li>
+
+<li>  T. Syeda-Mahmood, J. Wu, M. Morris, B. Sabury, "Automatic structuring of radiology reports, “RSNA 2019.</li>
+
+<li>  A. Jadhav, J. Wu, T. Syeda-Mahmood. "Knowledge-driven approach to boost the performance of solely image-based deep learning models" Society for Imaging Informatics in Medicine (SIIM) 2019, Denver, Colorado, USA. </li>
+<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, "Automatic Patient Data Summarization for Radiologist", RSNA 2019.</li>
+</ul>
+
+<h4> Regional finding detection</h4>
+<ul>
+<li>  J. T. Wu, Y. Gur, A. Karargyris, A.B. Syed, O. Boyko, M. Moradi, T. Syeda-Mahmood, "Automatic Bounding Box Annotation of Chest X-Ray Data for Localization of Abnormalities," in Proc. ISBI 2020</li>
+<li>  S. Kashyap, A. Karargyris, Joy T. Wu, Y. Gur, A. Sharma, K. C.L. Wong, M. Moradi, T. Syeda-Mahmood, "Looking in the Right Place for Anomalies: Explainable AI Through Automatic Location Learning," in Proc. ISBI 2020.</li>
+<li>  M. Moradi, K. C. L. Wong, A. Karargyris, and T. Syeda-Mahmood, "Quality controlled segmentation to aid disease detection", To appear in SPIE Medical Imaging 2020. </li>
+
+<li>  A. Harouni, H. Wang, T. Syeda-Mahmood, and D. Beymer. "Deep Network Anatomy Segmentation with Limited Annotations using Auxiliary Labels." In 2019 IEEE 16th International Symposium on Biomedical Imaging (ISBI 2019), pp. 6-10. IEEE, 2019.</li>
+</ul>
+
+<h4> Lung cancer </h4>
+<ul>
+<li>  V. Subramanian, M. Do, T. Syeda-Mahmood, "Multimodal Fusion of Imaging and Genomics for Lung Cancer Recurrence Prediction," in Proc. ISBI 2020</li>
+<li>  J. Francis, H. Wang, K. White, T. Syeda-Mahmood, R. Stevens, "Neural Network Segmentation of Cell Ultrastructure Using Incomplete Annotation," in Proc. ISBI 2020.</li>
+</ul>
+<h4> Tubes and Lines detection </h4>
+<ul>
+<li>  V. Subramanian, H. Wang, Joy Wu, K. CL Wong, A. Sharma, T. Syeda-Mahmood, "Automated detection and type classification of central venous catheters in chest X-rays", MICCAI 2019.</li>
+</ul>
+<h4> Fracture detection </h4>
+<ul
 <li>  Y. Cao, H. Wang, M. Moradi, P. Prasanna and T. Syeda-Mahmood.  “Fracture Detection in X-ray Images through Stacked Random Forests Feature Fusion,” in Proc. International Symposium on Biomedical Imaging, ISBI 2015
 </li>
 </ul>
@@ -341,7 +365,7 @@ Representative publications in chest X-ray radiology:
 <a href="research.html"> Back</a>
 <h3 id="brain"> Brain Imaging </h3>
 <p>
-In brain imaging, we covered diseases ranging from hematomas to Alzheimers’ but our strongest work here was on building new mathematical formulations to address the segmentation and registration problems. We consistently led the leaderboards of BRATS segmentation challenge until 2017 and developed novel segmentation approaches through the eras of statistical ML, deep learning, and Fourier neural operators. Most of these publications appear in MICCAI, IPMI and their associated journals. 
+In brain imaging, we covered diseases ranging from hematomas to Alzheimer's but our strongest work here was on building new mathematical formulations to address the segmentation and registration problems. We consistently led the leaderboards of BRATS segmentation challenge until 2017 and developed novel segmentation approaches through the eras of statistical ML, deep learning, and Fourier neural operators. Most of these publications appear in MICCAI, IPMI and their associated journals. 
 </p>
 Representative publications in this area:
 <ul>
@@ -399,7 +423,7 @@ Representative publications in digital twins for cancer care and beyond:
 <h3 id="interventional">Precision AI in Interventional imaging</h3>
 <p>
 
-Despite the increased adoption of  multimodal AI in healthcare, the impact to patient outcomes is yet to be fully seen. There is room for improvement both in the choice of problems and domains where AI can make a difference, as well as the influence of other inter-disciplinary fields such as neuroscience on the formation of novel AI architectures to address problems in healthcare and beyond.  While much of AI in imaging work has focused on diagnostic radiology, there is an even greater need for AI assistance in many interventional radiology and cardiology procedures for interpreting pre-procedural and intra-procedural images and sequences. These are challenging areas for AI as high levels of precision are needed in decision making involving integration of multiple sources of information including operative and pre-operative images, knowledge of interventional devices and their dimensional constraints, modeling of the dexterity of the interventional specialists, and real-time feedback for action guidance. Our work in precision interventional AI was developed under a research collaboration between Boston Scientific and MIT.  Specifically, we developed methods to detect stents and their malappositions in coronary arteries. We also developed novel neural networks for measuring continuous lumen boundaries in DVT ultrasound to select the correct size of internventional stents. Our stent detection method has been subsequently commercialized by Boston Scientific and introduced in clinics through their AVVIGO multi-modality guidance system. 
+Despite the increased adoption of  multimodal AI in healthcare, the impact to patient outcomes is yet to be fully seen. There is room for improvement both in the choice of problems and domains where AI can make a difference, as well as the influence of other inter-disciplinary fields such as neuroscience on the formation of novel AI architectures to address problems in healthcare and beyond.  While much of AI in imaging work has focused on diagnostic radiology, there is an even greater need for AI assistance in many interventional radiology and cardiology procedures for interpreting pre-procedural and intra-procedural images and sequences. These are challenging areas for AI as high levels of precision are needed in decision making involving integration of multiple sources of information including operative and pre-operative images, knowledge of interventional devices and their dimensional constraints, modeling of the dexterity of the interventional specialists, and real-time feedback for action guidance. Our work in precision interventional AI was developed under a research collaboration between Boston Scientific and MIT.  Specifically, we developed methods to detect stents and their malappositions in coronary arteries. We also developed novel neural networks for measuring continuous lumen boundaries in DVT ultrasound to select the correct size of interventional stents. Our stent detection method has been subsequently commercialized by Boston Scientific and introduced in clinics through their AVVIGO multi-modality guidance system. 
 </p>
 
 As this is an emerging area of interest, our publications are more recent:
