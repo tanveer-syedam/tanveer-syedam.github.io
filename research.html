@@ -108,8 +108,8 @@ th {
 <table>
 
 <tr>
-<td> <a href="#dataai">Data and AI</a></td><td> Computer Vision</td> <td> <a href="#bioinspired"> Bioinspired Memory models</a> </td> <td> <a href="#cancers">Representation learning</a></td><td> <a href="#compression">Vector compression</a> </td><td> Knowledge representation & Semantic Web</td> <td> Document analysis</td><td>Multimedia Search & Retrieval</td><td><a href="#factcheck">Fact-checking </a></td></tr>
-<tr><td> <a href="#health">Healthcare AI</a></td><td><a href="#cancers">Multimodal fusion </a></td> <td><a href="#cancers"> Digital twins </a></td> <td> <a href="#chest">Chest X-rays</a></td> <td> <a href="#interventional">Interventional AI</a></td> <td> <a href="#cardio">Cardiovascular imaging</a></td> <td><a href="#brain"> Brain imaging</a> </td> <td> <a href="#cancers"> Cancers</a></td><td> Clinical decision support </td></tr>
+<td> <a href="#dataai">Data and AI</a></td><td> Computer Vision</td> <td> <a href="#bioinspired"> Bioinspired Memory models</a> </td> <td> <a href="#cancers">Representation learning</a></td><td> <a href="#compression">Vector compression</a> </td><td> Knowledge representation & Semantic Web</td> <td> Document analysis</td><td>Multimedia Search & Retrieval</td><td><a href="#factcheck">Generative AI </a></td></tr>
+<tr><td> <a href="#health">Healthcare AI</a></td><td><a href="#cancers">Multimodal fusion (imaging, genomics, pathology,clinical) </a></td> <td><a href="#cancers"> Digital twins </a></td> <td> <a href="#chest">Chest X-rays</a></td> <td> <a href="#interventional">Interventional AI</a></td> <td> <a href="#cardio">Cardiovascular imaging</a></td> <td><a href="#brain"> Brain imaging</a> </td> <td> <a href="#informatics"> Healthcare Informatics</a></td><td> <a href="#decision">Clinical decision support </a></td></tr>
 <tr>
 </table>
 <div>
@@ -139,9 +139,7 @@ Topics explored in earlier eras include:
 
 
 
-
-
-<h3 id="factcheck"> Fact-checking generative AI</h3>
+<h3 id="factcheck"> Fact-checking of generative AI</h3>
 
 Despite the promise of generative AI in report generation, retaining factual correctness with minimal hallucinations has been challenging. Current methods of hallucination reduction such as DPO and PPO are applied at training or fine-tuning. Currently, there aren't many methods available at inference time to fact-check generative AI in a manner independent of the underlying generative AI. We have been developing fact-checking models for generated reports from imaging data. We are also developing methods to correct such reports with the help of language models. The key idea here is to generate a synthetic data designed to elicit the broad class of errors made by generative AI models and use this train a fact-checking model. We are also working on an automatic report correction method that uses both image and textual information in automated reports to spot identity and location errors of concepts mentioned through the use of fact-checking models. Promising results are already being seen in X-ray datasets.
 <ul>
@@ -260,7 +258,7 @@ A few representative publications across cardiac modalities addressed:
   <li>T. Syeda-Mahmood, F. Wang, R. Reddy, "Shape-based Retrieval of Heart Sounds for Disease Similarity Detection", in Proc. European Conference on Computer Vision (ECCV2008), 2008.</li>
 <li> T. Syeda-Mahmood, D. Beymer, and F. Wang, "Shape-based Matching of ECG Recordings", in Proc. International IEEE Conference on Engineering in Medicine and Biology (EMBC2007), Lyon, France, August 23-26, 2007. </li>
 </ul>
-<h4> Clinical decision support</h4>
+<h4> AALIM system</h4>
 <ul>
   <li>
  T. Syeda-Mahmood, F. Wang, D. Beymer, A. Amir, M. Richmond, S. N Hashmi, “AALIM: Multimodal Mining for Cardiac Decision Support”, in Proc. Computers in Cardiology, Durham, North Carolina, 2007.</li>
@@ -308,19 +306,7 @@ Representative publications in chest X-ray radiology:
 <li>  T. F. Syeda-Mahmood, R. Kumar, C.B. Compas, “Learning the correlation between images and disease labels from reports using ambiguous learning,” Medical Image Computing and Computer-Assisted Intervention, accepted for MICCAI 2015.</li>
 </ul>
 
-<h4> Clinical decision support</h4>
-<ul>
-<li>  J. Wu, K. C. L. Wong, Y. Gur, N. Ansari, A. Karargyris, A.Sharma, M. Morris, B. Sabury, H. Ahmad, O. Boyko, A. Syed, A. Jadhav, H. Wang, A. Pillai, S. Kashyap, M. Moradi, T. Syeda-Mahmood, "Artificial Intelligence versus Entry-level Radiologists for Full-fledged Preliminary Read of Frontal AP Chest Radiographs: A Comparative Study", Journal of American Medical Informatics Association, (JAMA) Network, October 9, 2020. (IF=13.35)</li>
-<li> Karina Kanjaria, Anup Pillai, Chaitanya Shivade, Marina Bendersky, Vandana Mukherjee and Tanveer Syeda-Mahmood, “Receptivity of an AI Cognitive Assistant by the Radiology Community: A Report on Data Collected at RSNA,” Best Industrial Paper Award at International Conference on Healthcare Informatics (part of BIOSTEC 2020). </li>
-<li>  T. Syeda-Mahmood, “Role of Big Data and Machine Learning in Diagnostic Decision Support in Radiology”, Journal of the American College of Radiology, 15(3), 569-576, 2018. (IF=5.3)
-</li>
 
-<li>  A. Pillai, A. Katouzian, A. Jadhav, M. Bendersky. K. Kanjaria, C. Shivade, V. Mukherjee, T. Syeda-Mahmood, “A knowledge-based question answering system to provide cognitive assistance to radiologists”, SPIE Medical Imaging 2019.</li>
-
-<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, "Automatic Patient Data Summarization for Radiologist", RSNA 2019.</li>
-
-<li>  T. F. Syeda-Mahmood, E. Walach, D. Beymer, F. Gilboa-Solomon, M. Moradi, P. Kisilev, D. Kakrania, C. B. Compas, H. Wang, M. Negahdar, Y. Cao, T. Baldwin, Y. Guo, Y. Gur, D. Rajan, A. Zlotnick, S. Rabinovici-Cohen, R. Ben-Ari, G. Amit, P. Prasanna, J. Morey, O. B. Boyko, S. Y. Hashoul, “Medical sieve: a cognitive assistant for radiologists and cardiologists,” SPIE Medical Imaging: Computer-Aided Diagnosis 2016.</li>
-</ul>
 <h4> Clinical knowledge/ text analytics</h4>
 <ul>
 <li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, “Semantic Expansion of Clinician Generated Data Preferences for Automatic Patient Data Summarization”, AMIA 2021.</li>
@@ -363,6 +349,53 @@ Representative publications in chest X-ray radiology:
 </ul>
 
 <a href="research.html"> Back</a>
+
+
+<h3 id="informatics"> Healthcare informatics</h3>
+<p>
+With the large-scale multimodal data collected during the AALIM project,  there was a rich opportunity to do comparative effectiveness research to ask questions regarding effectiveness of treatment, discovering a large number of co-morbidities between diseases or between drugs at the population level. Similarly, demographic distribution of diseases, and their outcomes could be measured. Predictive analytic models could be applied for varied problems ranging from hospital re-admissions, to likelihood of restenosis. Looking for clinical evidence across multimodal sources could reveals more patients that could benefit from treatments or interventions. Billing errors involving over or under billing could be discovered impacting revenue cycle management.  Much of this work was done in collaboration with device vendors (Edwards Life Sciences) and hospital systems such as Kaiser Permanente and Cedars-Sinai.
+</p>
+<ul>
+  <li>T. F. Syeda-Mahmood, Y. Guo, M. Moradi, D. Beymer, D. Rajan, Yu Cao, Y. Gur, M. Negahdar, “Identifying Patients at Risk for Aortic Stenosis Through Learning from Multimodal Data,” in Proc. MICCAI (3) 2016: 238-245</li>
+</ul>
+
+
+<a href="research.html"> Back</a>
+
+<h3 id="decision"> Clinical decision support</h3>
+<p>
+We pioneered the concept of patient similarity-guided clinical decision support in the AALIM system.  The AALIM system extracted information from different data sources from EMR, PACS, Laboratory systems, and reporting systems to form a longitudinal patient record. It used advanced analytics to extract diagnostic
+information from multimodal patient data and was the first
+system to find similar cases, diseases, comorbidities and medications using data-driven machine learning. AALIM brought the longitudinal and cross-sectional
+information of that population to the point of care. It provided
+clinicians with a consistent view of the patient's history as
+well as the ability to compare this history with that
+of other patients with similar test results and disease profiles.
+This comparison supplied the clinician with a refined insight
+as to the patient's diagnosis and the comparative effectiveness
+of different treatments on outcomes. 
+</p>
+<p>
+After AALIM, the next clinical decision support system combined data-driven reasoning with clinical knowledge. While current generative AI models are still trying to formulate diagnostic reasoning, the <a href="https://www.youtube.com/watch?v=0i11VCNacAE">Medical Sieve </a> project was an avant-garde clinical informatics system that collected clinical, textual and imaging data of patients from electronic health records systems. It then analyzed multimodal content to detect anomalies if any, and summarized the patient record collecting all relevant information pertinent to a chief complaint. The results of anomaly detection were then fed into a reasoning engine which used evidence from both patient-independent clinical knowledge and large-scale patient-driven similar patient statistics to arrive at potential differential diagnosis to help in clinical decision making. In compactly summarizing all relevant information to the clinician per chief complaint, the system retained provenance to the raw data for detailed review providing holistic summaries of patient conditions. The system was demonstrated in the domains of cardiology and breast radiology for differential diagnosis and imaging studies summarization. A demonstration called the Eyes of Watson was developed jointly with RSNA in 2016 in which 3000 radiologists participated.There were 260 million earned impressions, and 919,200 social impressions on Twitter and 10,934 views of this <a href="https://www.youtube.com/watch?v=XLb0xUe80uo">Eyes of Watson Video </a>. 
+</p>
+<ul>
+<li>  J. Wu, K. C. L. Wong, Y. Gur, N. Ansari, A. Karargyris, A.Sharma, M. Morris, B. Sabury, H. Ahmad, O. Boyko, A. Syed, A. Jadhav, H. Wang, A. Pillai, S. Kashyap, M. Moradi, T. Syeda-Mahmood, "Artificial Intelligence versus Entry-level Radiologists for Full-fledged Preliminary Read of Frontal AP Chest Radiographs: A Comparative Study", Journal of American Medical Informatics Association, (JAMA) Network, October 9, 2020. (IF=13.35)</li>
+<li> Karina Kanjaria, Anup Pillai, Chaitanya Shivade, Marina Bendersky, Vandana Mukherjee and Tanveer Syeda-Mahmood, “Receptivity of an AI Cognitive Assistant by the Radiology Community: A Report on Data Collected at RSNA,” Best Industrial Paper Award at International Conference on Healthcare Informatics (part of BIOSTEC 2020). </li>
+<li>  T. Syeda-Mahmood, “Role of Big Data and Machine Learning in Diagnostic Decision Support in Radiology”, Journal of the American College of Radiology, 15(3), 569-576, 2018. (IF=5.3)
+</li>
+
+<li>  A. Pillai, A. Katouzian, A. Jadhav, M. Bendersky. K. Kanjaria, C. Shivade, V. Mukherjee, T. Syeda-Mahmood, “A knowledge-based question answering system to provide cognitive assistance to radiologists”, SPIE Medical Imaging 2019.</li>
+
+<li>  A. Jadhav, T. Baldwin, J. Wu, V. Mukherjee, T. Syeda-Mahmood, "Automatic Patient Data Summarization for Radiologist", RSNA 2019.</li>
+
+<li>  T. F. Syeda-Mahmood, E. Walach, D. Beymer, F. Gilboa-Solomon, M. Moradi, P. Kisilev, D. Kakrania, C. B. Compas, H. Wang, M. Negahdar, Y. Cao, T. Baldwin, Y. Guo, Y. Gur, D. Rajan, A. Zlotnick, S. Rabinovici-Cohen, R. Ben-Ari, G. Amit, P. Prasanna, J. Morey, O. B. Boyko, S. Y. Hashoul, “Medical sieve: a cognitive assistant for radiologists and cardiologists,” SPIE Medical Imaging: Computer-Aided Diagnosis 2016.</li>
+ <li>
+ T. Syeda-Mahmood, F. Wang, D. Beymer, A. Amir, M. Richmond, S. N Hashmi, “AALIM: Multimodal Mining for Cardiac Decision Support”, in Proc. Computers in Cardiology, Durham, North Carolina, 2007.</li>
+
+</ul>
+
+<a href="research.html"> Back</a>
+
 <h3 id="brain"> Brain Imaging </h3>
 <p>
 In brain imaging, we covered diseases ranging from hematomas to Alzheimer's but our strongest work here was on building new mathematical formulations to address the segmentation and registration problems. We consistently led the leaderboards of BRATS segmentation challenge until 2017 and developed novel segmentation approaches through the eras of statistical ML, deep learning, and Fourier neural operators. Most of these publications appear in MICCAI, IPMI and their associated journals. 
@@ -376,7 +409,6 @@ Representative publications in this area:
 <li> H Wang, D Kakrania, H Tang, P Prasanna, T Syeda-Mahmood, “Fast Anatomy Segmentation by Combining Coarse Scale Multi-Atlas Label Fusion with Fine Scale Corrective Learning”, Computerized Medical Imaging and Graphics 68, 16-24, 2018.</li>
 <li> Ken C. L. Wong, M. Moradi, H. Tang, T. Syeda-Mahmood, "3D Segmentation with Exponential Logarithmic Loss for Highly Unbalanced Object Sizes", MICCAI 2018, pp. 612-619.</li>
 <li> K. C. L. Wong, T. Syeda-Mahmood, M. Moradi, “Building medical image classifiers with very unbalanced and limited data using segmentation networks”, Medical Image Analysis, vol. 49, pp. 105–116, 2018.</li>
-<li> Ken C. L. Wong, M. Moradi, H. Tang, T. Syeda-Mahmood, "3D Segmentation with Exponential Logarithmic Loss for Highly Unbalanced Object Sizes", MICCAI 2018, pp. 612-619.</li>
 <li> H. Wang, M.  Moradi, Y. Gur, P. Prasanna and T. F. Syeda-Mahmood, “A Multi-Atlas Approach to Region of Interest Detection for Medical Image Classification.” MICCAI 2017, pp. 168-176, 2017.
 <li> K. C. L. Wong, M. Moradi, A. Karargyris, T. Syeda-Mahmood, Building Disease Detection Algorithms with Very Small Number of Positive Samples, in Proc.  MICCAI 2017</li>
 <li> H. Wong, M. Moradi, Y. Gur, P. Prasanna, T. Syeda-Mahmood,” A multi-atlas approach to region of interest detection for medical image classification,” in Proc. MICCAI 2017</li>
