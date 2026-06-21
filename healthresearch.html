@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Healthcare AI Research - Tanveer Syeda-Mahmood">
+<meta name="author" content="Tanveer Syeda-Mahmood">
+<title>Healthcare AI Research | Tanveer Syeda-Mahmood</title>
+
+<link rel="stylesheet" href="sitefiles/custom.css">
+<script src="sitefiles/jquery-3.3.0.min.js"></script>
+<script src="sitefiles/bootstrap.min.js"></script>
+<script src="sitefiles/popper.min.js"></script>
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Sticky navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1000;
+    }
+
+    .logo {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #eee;
+    }
+    section + section {
+     margin-top: 20px;
+    }
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #111;
+      color: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: none;
+      font-size: 14px;
+    }
+
+    #backToTop:hover {
+      background: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo" onclick="scrollToTop()">
+     Home
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+    <a href="#impact">Impact</a>
+    <a href="#research">Research</a>
+     <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+<main role="main">
+
+<div class="container course_content" style="margin-top:80px;">
+
+<!-- HEADER -->
+<h1>Healthcare AI Research</h1>
+
+<p>
+Over the last 10+ years, my research has focused on building end-to-end Healthcare AI systems that integrate imaging, clinical, laboratory, and textual data for diagnostic reasoning, multimodal understanding, and decision support. These efforts span foundational algorithm development through large-scale translational deployment in clinical environments.
+</p>
+
+<p>
+<a href="index.html">← Back to Home</a>
+</p>
+
+<hr>
+
+<!-- QUICK NAV -->
+<h3>Research Areas</h3>
+<ul>
+  <li><a href="#platforms">Multimodal Healthcare AI Platforms</a></li>
+  <li><a href="#decision">Clinical Decision Support Systems</a></li>
+  <li><a href="#cardio">Cardiovascular Imaging</a></li>
+  <li><a href="#chest">Chest X-ray & Radiology AI</a></li>
+  <li><a href="#brain">Brain Imaging</a></li>
+  <li><a href="#cancers">Cancer & Multimodal Fusion</a></li>
+  <li><a href="#interventional">Interventional AI</a></li>
+  <li><a href="#informatics">Healthcare Informatics</a></li>
+</ul>
+
+<hr>
+
+<!-- PLATFORM WORK -->
+<h2 id="platforms">Multimodal Healthcare AI Platforms</h2>
+
+<p>
+A central thrust of my work has been the development of large-scale multimodal healthcare AI platforms that integrate electronic health records, imaging, laboratory data, and clinical narratives to enable patient-level reasoning and decision support.
+</p>
+
+<p>
+Early work led to the development of the AALIM system, which introduced the concept of patient-similarity-driven clinical decision support. This system integrated multimodal patient records and enabled retrieval of clinically similar cases for diagnostic and treatment guidance.
+</p>
+
+<p>
+Subsequent efforts expanded into the Medical Sieve project, which combined multimodal perception with knowledge-driven reasoning to support radiologists and cardiologists in complex diagnostic workflows. This work formed a foundation for cognitive imaging systems later incorporated into Watson Health Imaging products.
+</p>
+
+<ul>
+  <li>AALIM: Multimodal patient similarity and clinical decision support system (deployed in Kaiser Permanente and Cedars-Sinai)</li>
+  <li>Medical Sieve: Cognitive assistant for radiology and cardiology diagnosis</li>
+  <li>Watson Health Imaging: Translation of AI systems into clinical product pipelines</li>
+</ul>
+
+<hr>
+
+<!-- DECISION SUPPORT -->
+<h2 id="decision">Clinical Decision Support Systems</h2>
+
+<p>
+A major focus has been the design of AI systems that assist clinicians in diagnostic reasoning by integrating multimodal evidence from imaging, text, and structured clinical data.
+</p>
+
+<p>
+The AALIM system pioneered patient similarity-based reasoning, allowing clinicians to compare a patient’s multimodal profile with large cohorts of previously seen patients to support diagnosis and treatment decisions. This approach was later extended in Medical Sieve to incorporate knowledge-driven reasoning and structured report summarization.
+</p>
+
+<ul>
+  <li>Patient similarity-based diagnostic reasoning</li>
+  <li>Multimodal clinical summarization and evidence retrieval</li>
+  <li>Knowledge-driven diagnostic inference systems</li>
+</ul>
+
+<hr>
+
+<!-- CARDIO -->
+<h2 id="cardio">Cardiovascular Imaging AI</h2>
+
+<p>
+Cardiovascular imaging has been one of the earliest and most extensive application areas, spanning echocardiography, CT, MRI, angiography, ECG, and auscultation signals.
+</p>
+
+<p>
+Work in this area began with multimodal patient modeling and evolved into deep learning-based detection, segmentation, and disease classification systems used for clinical decision support and trial recruitment.
+</p>
+
+<ul>
+  <li>Echocardiography segmentation and anomaly detection</li>
+  <li>Cardiac CT calcium and dissection detection</li>
+  <li>Cardiac MRI segmentation and atlas-based modeling</li>
+  <li>Coronary angiography analysis and stenosis detection</li>
+</ul>
+
+<hr>
+
+<!-- CHEST -->
+
+<h2 id="chest">Chest X-ray & Radiology AI</h2>
+
+<p>
+Chest X-ray AI research evolved from classification systems into generative and reasoning-based radiology models capable of report generation and clinical interpretation. The work spans fine-grained labeling, multimodal learning, and most recently, fact-checking of generated radiology reports.
+</p>
+
+<h4>Key Contributions</h4>
+<ul>
+  <li>Multi-label disease classification in chest radiographs</li>
+  <li>Fine-grained clinical finding representation learning</li>
+  <li>Radiology report generation from imaging data</li>
+  <li>Knowledge-enhanced and reasoning-based AI systems</li>
+  <li>Fact-checking of generative radiology reports</li>
+</ul>
+
+<h4>Representative Publications</h4>
+<ul>
+  <li>
+    R. Mahmood et al., “Phrase-grounded Fact-checking for Automatically Generated Chest X-ray Reports,”
+    MICCAI 2025.
+  </li>
+
+  <li>
+    T. Syeda-Mahmood and L. Shi, “Searching for Fine-Grained Queries in Radiology Reports…,”
+    Journal of Machine Learning Research, 2022.
+  </li>
+
+  <li>
+    L. Shi et al., “Improving Neural Models for Radiology Report Retrieval…,” NAACL 2022.
+  </li>
+
+  <li>
+    T. Syeda-Mahmood et al., “Chest X-ray Report Generation through Fine-Grained Label Learning,”
+    MICCAI 2020.
+  </li>
+
+  <!-- (keep rest of your full list here exactly as-is) -->
+</ul>
+
+<h2 id="chest">Chest X-ray & Radiology AI</h2>
+
+<p>
+Chest X-ray analysis has been a major focus of recent work, particularly in developing deep learning systems for disease classification, report generation, and automated clinical reasoning.
+</p>
+
+<p>
+This line of work evolved from structured finding detection models to generative AI systems capable of producing radiology reports, along with recent work on hallucination detection and fact-checking of generated clinical text.
+</p>
+
+<ul>
+  <li>Chest X-ray classification and multi-label disease detection</li>
+  <li>Radiology report generation using fine-grained label learning</li>
+  <li>Knowledge-enhanced learning for medical imaging AI</li>
+  <li>Fact-checking and verification of generative radiology reports</li>
+</ul>
+
+<hr>
+
+<!-- BRAIN -->
+<h2 id="brain">Brain Imaging AI</h2>
+
+<p>
+Research in brain imaging has focused on segmentation, registration, and lesion detection across modalities such as MRI, including contributions to benchmark challenges in neuroimaging.
+</p>
+
+<p>
+Methods evolved from statistical modeling approaches to modern deep learning architectures and frequency-domain neural representations for robust 3D segmentation.
+</p>
+
+<ul>
+  <li>Brain tumor segmentation and lesion detection</li>
+  <li>Multi-atlas and learning-based registration methods</li>
+  <li>Fourier and frequency-domain neural architectures</li>
+</ul>
+
+<hr>
+
+<!-- CANCER -->
+<h2 id="cancers">Cancer & Multimodal Fusion</h2>
+
+<p>
+A major recent direction has been multimodal fusion for cancer and complex diseases, integrating imaging, genomics, pathology, and clinical data to model disease progression and treatment response.
+</p>
+
+<p>
+This includes development of multiplexed graph neural networks and imaging-genomics association models, enabling prediction of outcomes and discovery of disease biomarkers.
+</p>
+
+<ul>
+  <li>Multimodal graph neural networks for outcome prediction</li>
+  <li>Imaging-genomics association discovery</li>
+  <li>Digital twin modeling for oncology and chronic disease</li>
+</ul>
+
+<hr>
+
+<!-- INTERVENTIONAL -->
+<h2 id="interventional">Interventional AI</h2>
+
+<p>
+Interventional imaging presents unique challenges requiring real-time, high-precision interpretation of medical images during procedures.
+</p>
+
+<p>
+Work in this area includes AI systems for intravascular imaging, stent detection, and vessel segmentation, developed in collaboration with industry partners and translated into clinical guidance systems.
+</p>
+
+<ul>
+  <li>Intravascular ultrasound segmentation and analysis</li>
+  <li>Stent detection and malapposition analysis</li>
+  <li>Real-time procedural guidance algorithms</li>
+</ul>
+
+<hr>
+
+<!-- INFORMATICS -->
+<h2 id="informatics">Healthcare Informatics</h2>
+
+<p>
+Healthcare informatics work has focused on large-scale population-level analytics, including comparative effectiveness research, comorbidity discovery, and predictive modeling from multimodal clinical datasets.
+</p>
+
+<ul>
+  <li>Population-level outcome modeling</li>
+  <li>Comorbidity and drug interaction discovery</li>
+  <li>Clinical data mining from longitudinal EHR systems</li>
+</ul>
+
+<hr>
+
+<!-- FOOTER -->
+<p>
+<a href="#top">Back to top</a> |
+<a href="index.html">Home</a>
+</p>
+
+</div>
+</div>
+</main>
+
+</body>
+</html>

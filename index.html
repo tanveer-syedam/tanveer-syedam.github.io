@@ -3,11 +3,75 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <title>Tanveer Syeda-Mahmood</title>
-
 <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Sticky navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1000;
+    }
+
+    .logo {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #eee;
+    }
+    section + section {
+     margin-top: 10px;
+    }
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #111;
+      color: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: none;
+      font-size: 14px;
+    }
+
+    #backToTop:hover {
+      background: #333;
+    }
+  </style>
+<style>
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     margin: 0;
@@ -68,9 +132,7 @@ body {
 }
 
 /* SECTION */
-section {
-    margin-top: 70px;
-}
+
 
 h2 {
     font-size: 1.8em;
@@ -147,9 +209,6 @@ footer {
     color: #777;
     text-align: center;
 }
-
-
-
 </style>
 <style>
   /* 1. Base styling for your tag boxes (adjust layout as needed) */
@@ -186,9 +245,6 @@ footer {
     transform: scale(0.98);    /* Subtle physical press-down click effect */
   }
 </style>
-
-
-
 <style>
   /* Target links strictly inside this list */
   .clean-links-list a {
@@ -205,35 +261,214 @@ footer {
     opacity: 0.7;          /* Gives a slight visual flash at the exact moment of a click */
   }
 </style>
+<style>
+.pillars-horizontal {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
+.pillar {
+  flex: 1;
+  min-width: 220px;
+}
+
+.pillar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.pillar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pillar li {
+  margin-bottom: 8px;
+}
+
+.pillar a {
+  text-decoration: none;
+}
+</style>
+<style>
+.impact-columns {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.impact-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+.impact-col h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.impact-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.impact-col li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+</style>
+<style>
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+.research-card {
+  height: 700px;
+}
+
+.research-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* .research-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+} */
+.research-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #f8f8f8;
+}
+.research-card-content {
+  padding: 16px;
+}
+
+.research-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.research-card p {
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.research-links a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 0.9rem;
+  color: #003366;
+  text-decoration: none;
+}
+
+.research-links a:hover {
+  text-decoration: underline;
+}
+    
+</style>
+<style>
+    .verification-card {
+  padding: 10px 12px;
+}
+
+ .verification-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.verification-card img {
+  width: 100%;
+  height: 100px;   /* smaller than research cards */
+  object-fit: contain;
+  background: #f8f8f8;
+}
+
+.verification-card-content {
+  padding: 12px;
+}
+
+.verification-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.verification-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+</style>
 </head>
 
 <body>
+  <div class="navbar">
+    <div class="logo" onclick="scrollToTop()">
+     Home
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+    <a href="#impact">Impact</a>
+    <a href="#research">Research</a>
+     <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 
 <div class="container">
 
 <!-- HERO -->
-<section class="hero">
+<section id="about" class="hero">
 
 <img src="images/tanveer.jpg" alt="Profile Photo">
 
 <div class="hero-text">
-
 <h1>Tanveer Syeda-Mahmood</h1>
 
 <!-- <h2>IBM Fellow • Chief Scientist/Executive • AI Research Leader • Stanford Adjunct Professor</h2> -->
 <h2>IBM Fellow • AI Executive & Chief Scientist • Technology Strategist • Stanford Adjunct Professor</h2>
-<p>
-    I build intelligent systems that perceive, reason, remember, search, and verify. My work spans computer vision, medical imaging, healthcare AI, multimodal foundation models, neuro-inspired architectures, and trustworthy AI systems deployed in real-world settings.
-</p>
-<p>
 
-
-Over my career, I have led research and innovation initiatives that transformed advances in AI and machine learning into technologies, products, and businesses with significant impact. As an IBM Fellow, inventor, and technology executive, I work at the intersection of scientific discovery, organizational leadership, and technology strategy, helping shape the future of healthcare AI and intelligent systems.
-</p>
 <p>
-I teach and mentor students in Stanford's Biomedical Data Science Program and collaborate with leading researchers, clinicians, startups, and institutions worldwide. My current interests focus on multimodal intelligence, memory-inspired AI, trustworthy generative systems, and the development of next-generation architectures that bring reasoning, knowledge, and learning closer together.
+I am an AI executive and Chief Scientist with a career spanning invention, research leadership, and large-scale commercialization of artificial intelligence systems in healthcare and enterprise domains.
 </p>
+
+<p>
+My work spans computer vision, medical imaging, healthcare AI, multimodal foundation models, neuro-inspired architectures, and trustworthy AI systems deployed in real-world settings. It has helped shape medical imaging AI, multimodal foundation models, and clinical decision systems—translating research innovations into deployed technologies, enterprise platforms, and new business lines with global impact.
+</p>
+
+<p>
+I operate at the intersection of scientific discovery, enterprise AI strategy, and organizational leadership, building systems that move from early-stage research into production environments at scale.
+</p>
+
+<p>
+I also teach and mentor students in Stanford’s Biomedical Data Science Program and collaborate with leading researchers, clinicians, startups, and institutions worldwide.
+</p>
+
 
 <!-- <p>
 I build intelligent systems that perceive, reason, remember, search and verify.
@@ -246,7 +481,166 @@ trustworthy AI systems deployed in real clinical environments.
 I teach and mentor students in the Stanford Biomedical Data Science Program, and at other institutions around the country in healthcare AI topics. I work collaboratively with several research institutions around the world.
 </p> -->
 
-<div class="tags">
+
+</section>
+
+
+<section id="impact">
+
+<h2>Impact</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Scientific Impact</h3>
+<p>
+35+ years in AI research with 300+ publications, 180+ patents, and 20K+ citations across computer vision, medical imaging, and healthcare AI.
+</p>
+<p>
+<a href="#research"> Explore</a>
+</p>
+
+
+</div>
+
+<div class="card">
+<h3>Systems & Enterprise AI Impact</h3>
+<p>
+Led development and translation of AI systems into enterprise platforms and healthcare products, contributing to multi-billion-dollar impact across IBM’s AI and healthcare portfolio.
+</p>
+<p>
+<a href="#products">Explore</a>
+</p>
+
+</div>
+<div class="card">
+<h3>Strategic Impact & Enterprise Leadership</h3>
+<p>
+Shaped AI strategy, technical direction, and investment priorities across enterprise research and business units, 
+influencing platform evolution and long-term technology roadmaps.
+</p>
+<a href="#strategy">Explore</a>
+</div>
+
+<div class="card">
+<h3>Organizational Leadership</h3>
+<p>
+Built and led global AI organizations of up to 100+ researchers, engineers, clinicians, and product teams spanning research, development, and deployment.
+</p>
+<p>
+<a href="#org-leadership">Explore organizational scaling</a>
+<br>
+<a href="#teaching">Explore talent development</a></p>
+</p>
+</div>
+
+
+
+<div class="card">
+<h3>Ecosystem & Community Leadership</h3>
+<p>
+Active leadership across academia, industry, and healthcare ecosystems through advisory roles on boards,  conference leadership (CVPR, MICCAI), and co-founding initiatives such as the Digital Twin Society.
+</p>
+<p>
+  <a href="#leadership">Explore</a>
+</p>
+</div>
+
+<div class="card">
+<h3>Honors & Fellowships</h3>
+<p>
+IBM Fellow, IEEE Fellow, AIMBE Fellow, MICCAI Fellow. IEEE EMBS Technical Achievement Award.
+</p>
+<p>
+  <a href="#honors">Explore</a>
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="focus" class="focus-areas">
+
+  <h2>Focus Areas</h2>
+
+  <div class="pillars-horizontal">
+
+    <div class="pillar">
+      <h3>General AI & Intelligent Systems</h3>
+      <ul>
+        <li><a href="#verif">Verifier AI Models</a></li>
+         <li><a href="#rag">Multimodal RAG</a></li>
+        <li><a href="#multi">Multimodal Foundation Models</a></li>
+        <li><a href="#neuro">Neuro-Inspired Architectures</a></li>
+      </ul>
+    </div>
+
+    <div class="pillar">
+      <h3>Healthcare & Clinical AI</h3>
+      <ul>
+        <li><a href="#precision">Precision AI</a></li>
+        <li><a href="#fusion">Multimodal Fusion</a></li>
+        <li><a href="#decision">Clinical Decision Support & Informatics</a></li>
+      </ul>
+    </div>
+
+    <div class="pillar">
+      <h3>Leadership & Strategy</h3>
+      <ul>
+        <li><a href="#leadership">Leadership Service</a></li>
+        <li><a href="#products">Products & Deployments</a></li>
+        <li><a href="#strategy">Technology Strategy</a></li>
+        <li><a href="#collaboration">Industry & Academic Collaboration</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+<!-- <section id="impact" class="impact-metrics">
+
+  <h2>Impact</h2>
+
+  <div class="impact-columns">
+
+    <div class="impact-col">
+      <h3>Scientific & Technical Impact</h3>
+      <ul>
+        <li><strong>35+</strong> years in AI research</li>
+        <li><strong>300+</strong> peer-reviewed publications</li>
+        <li><strong>180+</strong> patents in AI & healthcare</li>
+        <li><strong>20K+</strong> citations</li>
+      </ul>
+    </div>
+
+    <div class="impact-col">
+      <h3>Leadership & Innovation</h3>
+      <ul>
+        <li><strong>IBM Fellow</strong> – senior technical leadership</li>
+        <li>Led large-scale global research organizations</li>
+        <li>Translating AI research into deployed systems</li>
+        <li>Board Member ABAIM, ABAIH, MICCAI</li>
+         <li><strong>Co-Founder</strong>, Digital Twin Society</li>
+      </ul>
+    </div>
+
+    <div class="impact-col">
+      <h3>Recognition & Service</h3>
+      <ul>
+        <li><strong>IEEE Fellow</strong></li>
+        <li><strong>AIMBE Fellow</strong></li>
+        <li><strong>MICCAI Fellow</strong></li>
+        <li>Program Chair – CVPR</li>
+        <li>General Chair – MICCAI</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section> -->
+
+
+<!-- <div class="tags">
 <span class="tag"><a href="#verif">Verification AI</a></span>
 <span class="tag"><a href="#precision">Healthcare Precision AI</a></span>
 <span class="tag"><a href="#multi">Multimodal Foundation Models</a></span>
@@ -257,13 +651,13 @@ I teach and mentor students in the Stanford Biomedical Data Science Program, and
 <span class="tag"><a href="#products">Products & Deployments</a></span>
 </div>
 
-</div>
-</section>
+</div> -->
+
 
 
 <!-- METRICS -->
 
-<section>
+<!-- <section>
 
 <h2>Leadership & Impact</h2>
 
@@ -289,11 +683,262 @@ I teach and mentor students in the Stanford Biomedical Data Science Program, and
 
 </div>
 
+</section> -->
+<section id="strategy">
+
+<h2>Technology Strategy</h2>
+
+<div class="card">
+
+<!-- <p>
+I provide technical and architectural guidance across AI systems spanning research, enterprise platforms, and early-stage startups, with a focus on scalable multimodal and foundation model systems.
+</p>
+
+<ul>
+<li>AI system architecture design across multimodal, generative, and retrieval-based systems</li>
+<li>Technology roadmap definition for enterprise and healthcare AI platforms</li>
+<li>AI verification, trust, and evaluation framework design for high-stakes systems</li>
+<li>Translation of research advances into scalable system and product architectures</li>
+<li>Advisory support for startups on AI system design, model selection, and deployment strategy</li>
+
+Enterprise AI platform strategy
+Foundation model adoption strategy
+Healthcare AI commercialization
+Research-to-product transition
+Trustworthy AI governance
+</ul>
+
+</div> -->
+
+
+<p>
+I have helped shape long-term AI and technology strategy across research organizations, enterprise platforms, and healthcare businesses by identifying emerging opportunities, guiding investment priorities, and translating scientific advances into scalable products, business initiatives, and new market opportunities.
+</p>
+
+<ul>
+
+<li>Member of IBM's cross-divisional Technology Team, contributing technology assessments and strategic recommendations for senior executive leadership</li>
+
+<li>Led long-range studies on AI, data, and computing technologies to guide research prioritization, investment decisions, and future product direction</li>
+
+<li>Helped define technology roadmaps that influenced enterprise AI platforms, intelligent information systems, and new business initiatives</li>
+
+<li>Contributed to technology due diligence and acquisition strategy, including the acquisition of Merge Healthcare that enabled commercialization of IBM medical imaging AI technologies and helped establish the Watson Health Imaging business</li>
+
+<li>Spearheaded Grand Challenge programs that aligned multidisciplinary research teams around strategic opportunities with significant business and societal impact</li>
+
+<li>Led invention and innovation initiatives that strengthened intellectual property strategy and accelerated technology commercialization</li>
+
+<li>Evaluated emerging AI technologies and architectures to guide adoption decisions, platform evolution, and strategic investment priorities.</li>
+</ul>
+
+</div>
+
 </section>
 
 
+
+<section id="org-leadership">
+
+<h2>Organizational Leadership</h2>
+
+<div class="card">
+
+<p>
+I have led and scaled global AI research organizations operating at the intersection of research, engineering, and clinical deployment, with teams spanning up to 100+ members across distributed functions.
+</p>
+
+<ul>
+<li>Scaling multidisciplinary teams across research, product, and clinical domains</li>
+<li>Translating exploratory research into structured execution pipelines and deliverables</li>
+<li>Defining organizational structure aligned with AI platform and product strategy</li>
+<li>Building execution culture across research-to-deployment workflows</li>
+<li>Aligning technical teams with enterprise priorities and clinical validation requirements</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="collaboration">
+
+<h2>Industry & Academic Collaboration</h2>
+
+<div class="card">
+
+<p>
+I work across academia, healthcare institutions, and industry organizations to build collaborative AI systems that translate research into real-world deployment.
+</p>
+
+<ul>
+<li>Cross-institutional collaboration across universities, hospitals, and industry labs</li>
+<li>Joint research-to-deployment programs in medical imaging and healthcare AI</li>
+<li>Partnerships with startups and enterprise AI teams on applied AI systems</li>
+<li>Clinical validation and deployment collaborations with healthcare organizations</li>
+<li>Research ecosystem development in multimodal and foundation AI systems</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- Leadership and service section  --> 
+<section id="leadership">
+
+<h2>Leadership & Professional Service</h2>
+
+<p style="margin-top:10px; color:#444;">
+Leadership roles across global AI, healthcare, and computer vision communities spanning conference organization, scientific governance, editorial leadership, and cross-sector advisory work.
+</p>
+
+<div class="grid">
+
+<!-- ================= CONFERENCE LEADERSHIP ================= -->
+<div class="card">
+<h3>Conference Leadership</h3>
+<ul>
+<li><b>General Chair</b> — MICCAI 2023</li>
+<li><b>Program Chair</b> — IEEE CVPR 2008</li>
+<li><b>Program Chair</b> IEEE ISBI 2022</li>
+<li>14 MICCAI Workshop Chair Roles</li>
+<li>10 CVPR/ICCV Workshop Chair Roles</li>
+</ul>
+</div>
+
+<!-- ================= BOARD & GOVERNANCE ================= -->
+<div class="card">
+<h3>Boards & Scientific Governance</h3>
+<ul>
+<li>MICCAI Board Member</li>
+<li>AIMBE Fellow Committee Service</li>
+<li>IEEE Fellow Evaluation Panels</li>
+<li>Editorial & scientific advisory boards</li>
+</ul>
+</div>
+
+<!-- ================= HEALTHCARE AI LEADERSHIP ================= -->
+<div class="card">
+<h3>Healthcare AI Leadership</h3>
+<ul>
+<li>American Board of AI in Medicine</li>
+<li>American Board of AI in Healthcare</li>
+<li>Clinical advisory committees (hospital systems & industry)</li>
+<li>Translational AI governance in clinical settings</li>
+</ul>
+</div>
+
+<!-- ================= EDITORIAL LEADERSHIP ================= -->
+<div class="card">
+<h3>Editorial Leadership</h3>
+<ul>
+<li>Medical Image Analysis</li>
+<li>IEEE Transactions on Medical Imaging</li>
+<li>IEEE TPAMI (Guest Editor)</li>
+<li>Computers in Biology and Medicine</li>
+</ul>
+</div>
+
+<!-- ================= GLOBAL SPEAKING ================= -->
+<div class="card">
+<h3>Global Thought Leadership</h3>
+<ul>
+<li>18+ Keynote lectures</li>
+<li>6 Plenary talks</li>
+<li>25+ Invited talks worldwide</li>
+<li>MICCAI, RSNA, NeurIPS workshops, ACM KDD, SPIE Medical Imaging</li>
+</ul>
+</div>
+
+<!-- ================= DIGITAL TWIN INITIATIVE ================= -->
+<div class="card">
+<h3>Digital Twin for Health Society</h3>
+<p>
+Co-founder of a global initiative advancing digital twin technologies in healthcare, connecting academia, industry, and clinical systems for precision medicine and AI-driven healthcare transformation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section  id="products">
+
+<h2>Products, Deployments & Industry Impact</h2>
+
+<p style="margin-top:10px; color:#444;">
+My work has translated into deployed AI systems, enterprise platforms, and new healthcare and AI product lines across industry and clinical settings.
+</p>
+
+<div class="grid">
+
+<!-- WATSON HEALTH IMAGING (FLAGSHIP CARD) -->
+<div class="card">
+<h3>Watson Health Imaging</h3>
+
+<p>
+Led a large-scale IBM initiative called the Medical Sieve Radiology Grand Challenge that translated foundational research in medical imaging AI into the Watson Health Imaging business. 
+</p>
+
+<ul>
+<li><b>IBM Patient Synopsis</b> — A patient electronic health record (EMR) summarization product.</li>
+<li><b>IBM Clinical Review</b> — A discrepancy detection and auditing product for revenue cycle management and peer review.</li>
+<li>Recognized with the AuntMinnie Best New Radiology AI Award for clinical translation impact</li>
+</ul>
+
+<p style="margin-top:10px; font-size:0.95em; color:#555;">
+        <a href="https://www.merative.com/"> Transitioned to Merative.com</a>
+</p>
+</div>
+
+<!-- ENTERPRISE AI -->
+<div class="card">
+<h3>AI Platforms</h3>
+<!-- <ul>
+<li><b>IBM watsonx.ai Intelligence</b> — Knowledge enrichment system deployed across enterprise AI search on IBM cloud.</li>
+<li><b>IBM Content-Aware Storage</b> — File-system–level multimodal retrieval and RAG-style search over enterprise storage systems.</li>
+<li><b>IBM Granite Vision 3.3</b> — Vision-language model contributing to leading OCRBench performance and 95K+ community downloads.</li>
+<li><b>Xerox DocuTech Systems</b> — Handwriting recognition and document understanding systems deployed in production scanners.</li>
+<li>
+<b>Early Autonomous Robotics Prototype</b> — Led development of an early automatic vacuum cleaner robot prototype in 1988.</li>
+</ul> -->
+<ul>
+<li><b>IBM watsonx.ai Intelligence</b> — Enterprise AI search and knowledge enrichment platform.</li>
+
+<li><b>IBM Content-Aware Storage</b> — Multimodal retrieval and RAG over enterprise storage systems.</li>
+
+<li><b>IBM Granite Vision 3.3</b> — Vision-language foundation model with leading OCR performance.</li>
+
+<li><b>Xerox DocuTech Systems</b> — Handwriting recognition and document understanding deployed in production scanners.</li>
+
+<li><b>Early Autonomous Robotics Prototype</b> — Co-developed one of the earliest autonomous vacuum-cleaning robot prototypes at MIT in 1988, preceding the founding of iRobot and later consumer robotic vacuum systems.</li>
+</ul>
+</div>
+<!-- CLINICAL DEPLOYMENTS -->
+<div class="card">
+<h3>Clinical Deployments & Healthcare Systems</h3>
+<ul>
+<li><b>Kaiser Permanente</b> — Large-scale deployment of multimodal cardiac clinical decision-support AI systems in real-world care settings.</li>
+<li><b>Cedars-Sinai</b> — Clinical AI platform enabling multimodal search over 1M+ patient records for cohort discovery and clinical trials selection.</li>
+<li><b>Deccan Hospital</b> — Clinical trial deployment of normal/abnromal screening software for chest X-rays.</li>
+</ul>
+</div>
+
+<!-- EARLY SYSTEMS -->
+<!-- <div class="card">
+<h3>Early Systems & Cross-Domain AI</h3>
+<ul>
+<li><b>Autonomous Robotics Prototypes</b> — Early robotic navigation research influencing later consumer robotics systems.</li>
+<li><b>Xerox DocuTech Systems</b> — Handwriting recognition and document understanding systems deployed in production scanners.</li>
+</ul>
+</div> -->
+
+
+</div>
+
+</section>
+
 <!-- RESEARCH VISION -->
-<section>
+<section id="research">
 
 <h2>Research Vision</h2>
 
@@ -315,45 +960,234 @@ toward trust, safety, and accountability in multimodal AI.
 </div>
 
 </section>
+<!-- RESEARCH JOURNEY -->
+<section>
 
+<h2>Research Journey</h2>
+
+<div class="timeline">
+<div class="timeline-item">
+<b>1980s</b> — Digital Signal Processing, Speech Signal Processing
+</div>
+
+<div class="timeline-item">
+<b>1990s</b> — Computer Vision, Attention Models, Content-Based Retrieval, Document Analysis
+</div>
+
+<div class="timeline-item">
+<b>2000s</b> — Multimedia Systems, Semantic Indexing, Large-Scale Retrieval, Semantic Web
+</div>
+
+<div class="timeline-item">
+<b>2010s</b> — Biomedical Informatics, Medical Imaging, Radiology and Cardiology Clinical Decision Support
+</div>
+
+<div class="timeline-item">
+<b>2020s</b> — Bioinspired memory models, Digital Twins, Multimodal Fusion Models 
+</div>
+
+<div class="timeline-item">
+<b>2024–Present</b> — Precision Interventional AI, Multimodal RAG systems, Verification AI 
+</div>
+
+</div>
+
+</section>
 
 <!-- VERIFICATION AI (FEATURED) -->
-<section>
+<section id="verif">
 
 <h2>Featured Work: Verification AI</h2>
 
 <div class="card">
 
-<h3 id="verif">Verification AI for Clinical Safety</h3>
+<h3 >Verification AI for Clinical Safety</h3>
 
 <p>
 Recent work introduces verifier models for radiology AI that detect factual inconsistencies,
 localization errors, and hallucinations in generated clinical reports. This is in collaboration with Prof. Pingkun Yan's group at RPI.
 The Master's student who led the work under our guidance recently won the <a href="https://cdss.berkeley.edu/dsus/2026-data-science-alumni-award-recipients">UC Berkeley Data Science ChangeMaker Award </a> for building trustworthy AI.
 </p>
-
-<p>
-This includes:
-<ul class="clean-links-list">
-<li><a href="https://link.springer.com/chapter/10.1007/978-3-032-04981-0_42">Phased-grounded discriminative verifier models (MICCAI'25)</a></li>
-<li><a href="https://huggingface.co/datasets/razi-mahmood/RadCheck">Large-scale radiology verification dataset (RadCheck)</a></li>
-<li><a href="https://arxiv.org/abs/2412.01031">Clinical evaluation metrics aligned with medical needs (RQ Score)</a></li>
-<li><a href="https://arxiv.org/abs/2412.01031">Automated correction pipelines for report refinement</a></li>
-<li><a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Mahmood_Phrase-grounded_APO_for_Improving_Chest_X-ray_Report_Generation_CVPR_2026_paper.pdf">Verification-guided training via preference optimization</a></li>
-</ul>
-</p>
-
 <p>
 This direction shifts AI systems from <i>generation-centric</i> to <i>verification-centric</i> design.
 </p>
 
+<div class="research-grid">
+
+  <div class="verification-card">
+    <img src="images/overallworkflow.png" alt="Verifier Models">
+
+    <div class="verification-card-content">
+      <h3>Phased-Grounded Verifier Models</h3>
+      <p>Phrase-grounded discriminative models for detecting hallucinations and factual inconsistencies in radiology reports that are agnostic to report generation models (RRG).</p>
+      <p>Automatic correction of radiology reports using fact-checking model-guided LLMs. Clinical studies documenting measurement improvement in report quality.</p>
+      <div class="verification-links">
+        <a href="https://arxiv.org/abs/2509.21356">MICCAI’25 paper</a>
+        <a href="https://ieeexplore.ieee.org/document/11515939">ISBI'26 paper</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="verification-card">
+    <img src="images/radcheck.jpg" alt="RadCheck Dataset">
+
+    <div class="verification-card-content">
+      <h3>RadCheck Dataset & RQ Score</h3>
+      <p>Large-scale dataset of 27 million pairs of images with real and fake findings used to train fact-checking models. 
+        It is the largest region-annotated dataset of fine-grained findings in chest X-rays.</p>
+        <p>
+            RQ score is a new light-weight quantitative scoring method to evaluate the quality of LLM-generated radiology reports that measures clinical finding accuracy along with the localization accuracy. </p>
+        </p>
+      <div class="verification-links">
+       <a href="https://huggingface.co/datasets/razi-mahmood/RadCheck">HuggingFace Dataset</a>
+      <a href="https://arxiv.org/abs/2412.02177"> ISBI'25 paper</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="verification-card">
+    <img src="images/apo.png" alt="APO">
+
+    <div class="verification-card-content">
+      <h3>Automatic Alignment of VLMs</h3>
+     
+      <p>Phrase-Grounded APO improves radiology report quality by automatically verifying and correcting generated reports during inference, 
+        eliminating the need for ground-truth preference data. By combining factual verification with image-grounded alignment, 
+        the method improves report quality by 30–40% across multiple state-of-the-art radiology report generators.</p>
+      <div class="verification-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Mahmood_Phrase-grounded_APO_for_Improving_Chest_X-ray_Report_Generation_CVPR_2026_paper.pdf">CVPR'2026 Paper</a>
+      </div>
+    </div>
+  </div>
 </div>
+</section>
+<!-- CURRENT RESEARCH -->
+
+<section>
+  <h2>Selected Research</h2>
+
+  <!-- Healthcare AI -->
+
+
+  <!-- General AI -->
+  <h3 class="research-subtitle">General AI</h3>
+
+  <div class="research-grid">
+
+    <div id="rag" class="research-card">
+      <img src="images/3dcube.png" height=100 alt="VectorDB">
+      <div  class="research-card-content">
+        <h3>Multimodal RAG</h3>
+        <p>Advanced search techniques I developed for vector DB that exploit multimodal document structure in pdfs, and combine lexical and semantic search in an integrated way are now part of new IBM 
+            <a href="https://www.ibm.com/docs/en/fusion-software/2.10.x?topic=services-content-aware-storage-cas">Content-aware storage product</a>
+        </p>
+       <p>
+        <a href="https://ieeexplore.ieee.org/document/10825761">Vector quantization with sorting transformation</a>
+       </p> 
+        <p>
+           We developed a new sorting-based transformation that improves vector quantization efficiency, achieving near-uncompressed search accuracy with significantly lower memory cost.  
+        <div class="research-links">
+          <a href="https://openreview.net/pdf?id=cK9l83DOUf">ICML'25 Vector DB Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- add more general AI cards here -->
+     <div id="multi" class="research-card">
+      <img src="images/canvas.png" height=100 alt="SemCLIP">
+      <div class="research-card-content">
+        <h3>Multimodal Foundation Models</h3>
+        <p>I shepherded IBM's <a href="https://huggingface.co/ibm-granite/granite-3.3-2b-instruct">Granite Vision 3.3 2B </a> foundation model; Top OCRBench performer, 95K+ downloads  </p>
+
+<p><u><a href="https://raw.githubusercontent.com/mlresearch/v322/main/assets/syeda-mahmood26a/syeda-mahmood26a.pdf">SemCLIP: A Semantic Memory-Aligned Vision Language Model</a></u></p>
+
+The formation and recall of memories in the brain utilizes the linkage between episodic
+and semantic memory subsystems. In this work, I exploited this paradigm to design a new vision-language model that projects
+ visual and textual concepts into a semantic memory space to build stable conceptual associations between objects and ways of referring to them.
+ </p>
+        <div class="research-links">
+          <a href="https://raw.githubusercontent.com/mlresearch/v322/main/assets/syeda-mahmood26a/syeda-mahmood26a.pdf">NeurIPS'2025 UniReps Paper</a>
+        </div>
+      </div>
+    </div>
+    <div id="neuro" class="research-card">
+      <img src="images/crossmodal.png" height =100 alt="Hopfield">
+      <div class="research-card-content">
+        <h3>Cross-Modal Hopfield Networks</h3>
+        <p> The bioinspired memories project I led on building a computational model of the hippocampal memory system launched a new IBM 
+   <a href="https://www.ibm.com/docs/en/fusion-software/2.10.x?topic=services-content-aware-storage-cas">Content-aware storage product</a></p>
+<p><u><a href="https://arxiv.org/pdf/2409.16408.pdf">Cross-Modal Hopfield Networks</a></u></p>
+The hippocampal trisynaptic circuit plays a key role in memory formation and recall. While CA3 auto-associative behavior has been modeled using Modern Hopfield Networks, scaling these models for large-scale storage remains challenging. This work introduces a dentate gyrus–inspired encoding stage before Hopfield storage, enabling accurate retrieval of large sets of facts through cross-modal associations.</p>
+
+        <div class="research-links">
+          <a href="https://arxiv.org/pdf/2409.16408.pdf">NeurIPS'24 UniReps Paper</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+    <h3 class="research-subtitle">Healthcare AI</h3>
+
+  <div class="research-grid">
+
+    <div id="precision" class="research-card">
+     <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2771528"> <img src="images/jamacover.png" alt="JAMA"></a>
+      <div class="research-card-content">
+        <h3>Precision AI</h3>
+        <p>
+      Precision AI develops highly accurate AI systems for diagnosis and intervention in high-stakes clinical settings. 
+      My work includes early generative AI for chest X-ray interpretation and novel intravascular imaging architectures for cardiovascular interventions.
+      </p>
+<p><u> <a href="https://arxiv.org/abs/2408.04826">Geo-UNet: Geometry-guided U-Net</a></u></p>
+<p>In collaboration with Boston Scientific and MIT, we developed novel neural network architectures for intravascular imaging and stent guidance, technologies that were subsequently commercialized and deployed clinically through Boston Scientific's AVVIGO multimodality guidance platform.     <div class="research-links">
+          <a href="https://arxiv.org/abs/2408.04826">MICCAI'24, MLMI Paper</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- add more healthcare cards here -->
+      <div id="fusion" class="research-card">
+      <a href="https://www.nature.com/articles/s42256-024-00801-1"><img src="images/cardiac.jpeg" alt="Cardiac"></a>
+      <div  class="research-card-content">
+        <h3>Multi-modal Fusion</h3>
+        <p> 
+        My research develops multimodal AI methods that integrate clinical, imaging, genomic, and laboratory data to improve disease modeling and outcome prediction.
+         We introduced multiplexed graph neural networks for cross-modal fusion, achieving state-of-the-art results in treatment outcome prediction and earning
+          recognition as a MICCAI 2022 Young Scientist finalist. 
+          More recently, through multimodal fusion research of cardiac MRI with genomci data, we enabled the discovery of 49 genomic loci associated with 
+          cardiac morphology that appeared on the cover of Nature Machine Intelligence.
+        </p>
+        <div class="research-links">
+          <a href="https://arxiv.org/abs/2210.14377">MedIA'24 Paper</a> <a href="https://arxiv.org/pdf/2307.07093">ICML'23 Paper</a>
+        </div>
+      </div>
+    </div>
+     <div id="decision" class="research-card">
+      <a href="https://www.youtube.com/watch?v=BlsPKg612x0"><img src="images/eyesofwatson.png" alt="EyesofWatson"></a>
+      <div  class="research-card-content">
+        <h3>Clinical Decision Support & Informatics</h3>
+        <p>
+     My work in healthcare AI has spanned clinical decision support, healthcare informatics, predictive analytics, and population health. 
+     Through systems such as AALIM and Medical Sieve, I pioneered multimodal AI approaches that integrated clinical, imaging, and 
+     laboratory data to support diagnosis, patient similarity search, clinical reasoning, outcome prediction, and healthcare operational analytics at scale.
+            </p>
+        <p>
+        IBM launched a new <a href="https://www.merative.com/">Watson Health Imaging</a> business by acquiring Merge Healthcare to commercialize the research I led in AALIM and Medical Sieve eras.
+        </p>
+        <!-- <div class="research-links">
+          <a href="research.html">Explore healthcare AI work in detail</a>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
-
-<!-- CURRENT RESEARCH -->
-<section>
+ 
+<!-- <section>
 
 <h2>Recent Research</h2>
 
@@ -394,34 +1228,27 @@ The trisynaptic circuit of the hippocampal system in the brain holds the key to 
 
 </div>
 
-</section>
-<section>
+</section> -->
+<!-- <section>
 
 <h2 id="leadership">Leadership & Community Impact</h2>
 
 <div class="card">
 
 <p>
-Beyond research contributions, I have helped shape the evolution of
-computer vision and healthcare AI communities through leadership roles
-in major international conferences and professional organizations.
-</p>
-
-<ul>
-<li>General Chair, MICCAI 2023</li>
-<li>Program Chair, IEEE CVPR 2008</li>
-<li>Co-Founder, Digital Twin for Health Society</li>
-<li>Board Member, MICCAI, AIMBE, ABAIM, ABAIH</li>
-</ul>
-
+    Over three decades, I have helped shape the computer vision, medical imaging, and healthcare AI communities through leadership roles in major conferences, professional societies, advisory boards, and strategic initiatives. These activities have included conference leadership, community building, mentorship, standards development, and fostering collaboration across academia, industry, and healthcare.
+    </p>
 <p>
-<a href="leadership.html">Explore Leadership & Service →</a>
+<a href="leadership2.html">Explore Leadership & Service →</a>
 </p>
 
 </div>
 
-</section>
-<section>
+</section> -->
+
+
+
+<!-- <section>
 
 <h2 id="products">Products, Deployments & Industry Impact</h2>
 
@@ -476,7 +1303,7 @@ leading OCRBench performance and >95,000 community downloads.
 
 </div>
 
-</section>
+</section> -->
 
 <!-- LEADERSHIP -->
 <!-- <section>
@@ -493,68 +1320,187 @@ leading OCRBench performance and >95,000 community downloads.
 </div>
 
 </section> -->
+<section id="honors">
 
-<section>
+<h2>Honors & Recognition</h2>
 
-<h2 id="courses">Teaching & Mentorship</h2>
+<div class="grid">
+
+<!-- CARD 1 -->
 <div class="card">
+<h3>Career Fellowships</h3>
 <ul>
-<li><a href="https://web.stanford.edu/class/cs277/">
-CS277, BMDS271 Foundational Models in Healthcare</a></li>
-<li><a href="https://sites.google.com/view/miccai-2026-tutorial">From Foundational to Multimodal Models for Medical Imaging (FMLLM), MICCAI 2026</a></li>
-<li><a href="https://sites.google.com/view/miccai-2025-tutorial">From Foundational to Multimodal Models in Medical Imaging (FMLLM), MICCAI 2025</a></li>
-<li><a href="https://sites.google.com/view/miccai-2024-tutorial">Foundational Models for Medical Imaging (FOMMIA), MICCAI 2024</a></li>
-
+<li>IBM Fellow</li>
+<li>IEEE Fellow</li>
+<li>AIMBE Fellow</li>
+<li>MICCAI Fellow</li>
+<li>AAIA Fellow</li>
 </ul>
 </div>
 
+<!-- CARD 2 -->
+<div class="card">
+<h3>Industry & Institutional Recognition</h3>
+<ul>
+<li>IEEE EMBS Professional Career Achievement Award (2025)</li>
+<li>IBM Master Inventor (long-term designation)</li>
+<li>Multiple IBM Corporate & Innovation Awards</li>
+<li>Best of IBM Award</li>
+</ul>
+</div>
 
-<p>
-These courses explore emerging advances in multimodal foundation models,
-clinical AI, verification systems, and future directions for trustworthy
-healthcare AI. The course taught at Stanford is a full-length course along with Prof. James Zhou and Akshay Chaudhari. Other courses listed are 4-8 hour tutorials delivered at the MICCAI conference for medical imaging attendees.
+<!-- CARD 3 -->
+<div class="card">
+<h3>Scientific & Innovation Awards</h3>
+<ul>
+<li>AMIA Homer Warner Award (2020)</li>
+<li>MICCAI Young Scientist Finalist (2022)</li>
+<li>AuntMinnie Best New Radiology Software Award (2017)</li>
+<li>Elsevier MICCAI Best Paper Award (2016)</li>
+<li>30+ invention plateau awards</li>
+</ul>
+</div>
 
+</div>
+
+</section>
+
+<section id="teaching">
+
+<h2>Talent Development & Mentorship</h2>
+
+<p style="color:#444;">
+Developing talent and disseminating advanced knowledge in AI, medical imaging, and multimodal intelligent systems across academia, industry, and healthcare.
 </p>
 
+<div class="grid">
+
+<!-- CARD 1: PhD Advising -->
+<div class="card">
+
+<h3>PhD Advising & Research Mentorship</h3>
+
+<p>
+I advise and mentor PhD students, Master’s students, and postdoctoral researchers working at the intersection of multimodal AI,
+medical imaging, and trustworthy AI systems.
+</p>
+
+<ul>
+<li>Co-advising PhD and Master’s thesis research in multimodal AI and clinical AI systems</li>
+<li>Supporting students through research fellowships, internships, and academic career development</li>
+<li>Providing guidance on research direction, publication strategy, and long-term career pathways</li>
+<li>Fostering independent research leadership in academia, industry, and healthcare AI roles</li>
+</ul>
+
+</div>
+
+<!-- CARD 2: Courses -->
+<div class="card">
+
+<h3>Courses & Advanced Training</h3>
+
+<p>
+I design and teach advanced courses and tutorials on multimodal AI, foundation models, and medical imaging for graduate students, researchers, and industry practitioners.
+</p>
+
+<ul>
+<li><a href="https://web.stanford.edu/class/cs277/">
+CS277 / BMDS271: Foundational Models in Healthcare AI (Stanford)</a></li>
+
+<li><a href="https://sites.google.com/view/miccai-2026-tutorial">
+MICCAI 2026 Tutorial: From Foundational to Multimodal Models for Medical Imaging</a></li>
+
+<li><a href="https://sites.google.com/view/miccai-2025-tutorial">
+MICCAI 2025 Tutorial: From Foundational to Multimodal Models for Medical Imaging</a></li>
+
+<li><a href="https://sites.google.com/view/miccai-2024-tutorial">
+MICCAI 2024 Tutorial: Foundational Models for Medical Imaging</a></li>
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
-Leadership & Service
 
-<!-- RESEARCH JOURNEY -->
-<section>
 
-<h2>Research Journey</h2>
+<section id="contact">
 
-<div class="timeline">
-<div class="timeline-item">
-<b>1980s</b> — Digital Signal Processing, Speech Signal Processing
+<h2>Contact</h2>
+
+<p style="color:#444;">
+I welcome conversations on executive leadership opportunities, chief scientist and chief AI officer roles, technology strategy, startup advisory engagements, healthcare AI innovation, research collaborations, and invited speaking opportunities.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Professional Inquiries</h3>
+
+<p>
+For executive opportunities, board and advisory roles,
+startup discussions, strategic AI initiatives,
+research partnerships, and speaking engagements:
+</p>
+
+<p>
+📧
+<a href="mailto:tanveersyeda1@stanford.edu">
+tanveersyeda1@stanford.edu
+</a>
+</p>
+
 </div>
 
-<div class="timeline-item">
-<b>1990s</b> — Computer Vision, Attention Models, Content-Based Retrieval, Document Analysis
+<div class="card">
+
+<h3>Professional Profiles</h3>
+
+<ul class="clean-links-list">
+
+<li>
+<a href="https://www.linkedin.com/in/tanveer-syeda-mahmood/" target="_blank">
+LinkedIn
+</a>
+</li>
+
+<li>
+<a href="https://scholar.google.com/citations?user=Ytks8n0AAAAJ&hl=en&oi=ao" target="_blank">
+Google Scholar
+</a>
+</li>
+
+<li>
+<a href="https://patents.google.com/?q=(syeda-mahmood)&oq=syeda-mahmood" target="_blank">
+Patent Portfolio
+</a>
+</li>
+
+</ul>
+
 </div>
 
-<div class="timeline-item">
-<b>2000s</b> — Multimedia Systems, Semantic Indexing, Large-Scale Retrieval, Semantic Web
-</div>
+<div class="card">
 
-<div class="timeline-item">
-<b>2010s</b> — Biomedical Informatics, Medical Imaging, Radiology and Cardiology Clinical Decision Support
-</div>
+<h3>Areas of Interest</h3>
 
-<div class="timeline-item">
-<b>2020s</b> — Bioinspired memory models, Digital Twins, Multimodal Fusion Models 
-</div>
+<ul>
+<li>Healthcare AI & Clinical Foundation Models</li>
+<li>Multimodal AI & Intelligent Systems</li>
+<li>Verification AI & Trustworthy AI</li>
+<li>Data & AI Platforms</li>
+<li>Neuro-Inspired Architectures</li>
+<li>Technology Strategy & Innovation</li>
+<li>Research Leadership & Talent Development</li>
+</ul>
 
-<div class="timeline-item">
-<b>2024–Present</b> — Precision Interventional AI, Multimodal RAG systems, Verification AI 
 </div>
 
 </div>
 
 </section>
-
 
 <!-- RESOURCES -->
 <section>
@@ -562,12 +1508,12 @@ Leadership & Service
 <h2>Explore</h2>
 
 <div class="links">
-<a href="research.html">Research</a>
-<a href="leadership.html">Leadership</a></li>
-<a href="publications.html">Publications</a>
-<a href="patents.html">Patents</a>
+<a href="#research">Research</a>
+<a href="#leadership">Leadership</a></li>
+<!-- <a href="publications.html">Publications</a> -->
+<!-- <a href="patents.html">Patents</a> -->
 <!--<a href="cv.pdf">CV</a>-->
-<a href="contact.html">Contact</a>
+<a href="#contact">Contact</a>
 </div>
 
 
@@ -587,6 +1533,23 @@ Leadership & Service
 </footer>
 
 </div>
+<button id="backToTop" onclick="scrollToTop()">↑ Top</button>
+
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
 
 </body>
 </html>
