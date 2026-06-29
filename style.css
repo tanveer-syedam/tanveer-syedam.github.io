@@ -1,0 +1,12 @@
+.publication {
+    margin-bottom: 1em;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+}
+.group ol {
+    padding-left: 1.8em;
+}
+
+.group li {
+    margin-bottom: 1em;
+}

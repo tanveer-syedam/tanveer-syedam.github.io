@@ -3,37 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Tanveer Syeda-Mahmood</title>
+    <title>Publications by topics - Tanveer Syeda-Mahmood</title>
 
     <link rel="stylesheet" href="mainstyle.css">
 </head>
 
-<body class="publications" data-view="year">
-    
+<body class="publications" data-view="topics">
 
 <header class="navbar">
     <div class="logo">
         <a href="index.html">Tanveer Syeda-Mahmood</a>
     </div>
 
-  
     <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="publications.html">By Year</a>
-        <!-- <a href="publications-topics.html">By Topic</a> -->
+        <a href="publications-topics.html">By Topic</a>
         <a href="publications-venues.html">By Venue</a>
     </nav>
 </header>
-      <!-- 2. VENUE SUB-NAV (auto-filled by JS) -->
-
- <h1>Publications</h1>
-    My publications can be browsed chronologically, by research topic, or by publication venue.
 
 <div class="container">
-    <div id="content"></div>
+  <div id="content"></div>
     <section>
-        <div id="years"></div>
+
+        <h1>Publications</h1>
+
+        <p>
+            My publications can be browsed chronologically,
+            by research topic, or by publication venue.
+        </p>
+
     </section>
+    <section>
+
+      <h2>By Topics</h2>
+
+     <div id="topics"></div>
+
+    </section>
+   
+
 </div>
 
 <script src="app.js"></script>

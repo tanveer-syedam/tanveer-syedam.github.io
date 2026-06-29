@@ -1,0 +1,317 @@
+[
+  {
+    "id": "semclip-2026",
+    "title": "SemCLIP: A semantic memory-aligned vision language model",
+    "authors": ["T. Syeda-Mahmood","K.C.L. Wong","S. Kashyap","N. Dsouza","L. Shi","R. Mahmood","H. Wang"],
+    "year": 2026,
+    "venue": "PMLR / NeurIPS UniReps Workshop",
+    "type": "workshop",
+    "venue_category": "Workshop",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "vision language model",
+      "semantic memory alignment",
+      "representation learning"
+    ]
+  },
+  {
+    "id": "hopfield-encoded-reps-2024",
+    "title": "Modern Hopfield Networks meet Encoded Neural Representations – Addressing Practical Considerations",
+    "authors": ["S. Kashyap","N. Dsouza","L. Shi","K.C.L. Wong","H. Wang","T. Syeda-Mahmood"],
+    "year": 2024,
+    "venue": "PMLR / NeurIPS UniReps Workshop",
+    "type": "workshop",
+    "venue_category": "Workshop",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "hopfield networks",
+      "representation learning",
+      "neural embeddings"
+    ]
+  },
+  {
+    "id": "radiology-similarity-embedding-2022",
+    "title": "Searching for Fine-Grained Queries in Radiology Reports Using Similarity-Preserving Contrastive Embedding",
+    "authors": ["T. Syeda-Mahmood","L. Shi"],
+    "year": 2022,
+    "venue": "JMLR",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "radiology reports",
+      "information retrieval",
+      "contrastive embedding"
+    ]
+  },
+  {
+    "id": "lexicon-annotation-naacl-2022",
+    "title": "Improving Neural Models for Radiology Report Retrieval with Lexicon-based Automated Annotation",
+    "authors": ["L. Shi","T. Syeda-Mahmood","T. Baldwin"],
+    "year": 2022,
+    "venue": "NAACL",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "radiology reports",
+      "information retrieval",
+      "lexicon annotation"
+    ]
+  },
+  {
+    "id": "spatial-flattening-isbi-2022",
+    "title": "Spatially preserving flattening for location-aware classification of findings in chest X-rays",
+    "authors": ["N. Srivathsa","R. Mahmood","T. Syeda-Mahmood"],
+    "year": 2022,
+    "venue": "ISBI",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "chest x-ray",
+      "image classification",
+      "spatial representation"
+    ]
+  },
+  {
+    "id": "taxonomy-kr-1989",
+    "title": "Taxonomic Syntax for First Order Inference",
+    "authors": ["D. McAllester","R. Givan","S.T. Fathima"],
+    "year": 1989,
+    "venue": "KR",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "first order logic",
+      "knowledge representation",
+      "inference"
+    ]
+  },
+  {
+    "id": "cvpr-2026-phrase-apo",
+    "title": "Phrase-grounded APO for improving chest X-ray report generation",
+    "authors": ["R. Mahmood","T. Syeda-Mahmood"],
+    "year": 2026,
+    "venue": "CVPR",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "chest x-ray",
+      "report generation",
+      "vision language model"
+    ]
+  },
+  {
+    "id": "isbi-2026-report-correction",
+    "title": "Automatic correction of generative AI chest X-ray radiology reports",
+    "authors": ["R. Mahmood","P.K. Yan","T. Syeda-Mahmood"],
+    "year": 2026,
+    "venue": "ISBI",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "chest x-ray",
+      "report correction",
+      "generative ai"
+    ]
+  },
+  {
+    "id": "miccai-fact-checking-2025",
+    "title": "Phrase-grounded Fact-checking for Automatically Generated Chest X-ray Reports",
+    "authors": ["M. Machado-Reyes","J. Wu","P. Kaviani","K.C.L. Wong","N. Dsouza","M. Kalra","G. Wang","P. Yan","T. Syeda-Mahmood"],
+    "year": 2025,
+    "venue": "MICCAI",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "chest x-ray",
+      "fact checking",
+      "report verification"
+    ]
+  },
+  {
+    "id": "nature-mim-ventricular-2024",
+    "title": "Unsupervised ensemble-based phenotyping enhances gene discoverability in imaging genetics: new associations from left-ventricular morphology",
+    "authors": ["R. Bonazzola","E. Ferrante","N. Ravikumar","Y. Xia","B. Keavney","S. Plein","T. Syeda-Mahmood","A.F. Frangi"],
+    "year": 2024,
+    "venue": "Nature Machine Intelligence",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "imaging genetics",
+      "phenotyping",
+      "ensemble learning"
+    ]
+  },
+  {
+    "id": "medical-ai-medical-image-analysis-2024",
+    "title": "Fusing Modalities by Multiplexed Graph Neural Networks for Outcome Prediction from Medical Data",
+    "authors": ["N.S. D’Souza","H. Wang","A. Giovannini","A. Foncubierta-Rodríguez","K. Beck","O. Boyko","T. Syeda-Mahmood"],
+    "year": 2024,
+    "venue": "Medical Image Analysis",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "multimodal data",
+      "graph neural networks",
+      "outcome prediction"
+    ]
+  },
+  {
+    "id": "digital-twins-npj-2024",
+    "title": "Digital twins for health: a scoping review",
+    "authors": ["E. Katsoulakis","Q. Wang","H. Wu","L. Shahriyari","R. Fletcher","J. Liu","T. Syeda-Mahmood"],
+    "year": 2024,
+    "venue": "NPJ Digital Medicine",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "digital twins",
+      "healthcare ai",
+      "systematic review"
+    ]
+  },
+  {
+    "id": "cnn-pet-mri-lymphoma-2026",
+    "title": "CNN-based detection of pediatric lymphoma on whole body 18F-FDG PET/MRI",
+    "authors": ["S. Singh","Y.U. Lokesha","H. Wang","M.J. Barrow","R. Von Kruechten","I. Vasyliv","A.H. Sarrami","J.T.Y. Wu","L. Baratto","L.C. Adams","H.G. Kim","J. Wong","T. Liang","S. Gatidis","T. Syeda-Mahmood","H.E. Daldrup-Link"],
+    "year": 2026,
+    "venue": "American Journal of Nuclear Medicine and Molecular Imaging",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "pet mri",
+      "lymphoma detection",
+      "medical imaging"
+    ]
+  },
+  {
+    "id": "hnotseg-xs-tmi-2026",
+    "title": "HNOSeg-XS: Extremely Small Hartley Neural Operator for Efficient and Resolution-Robust 3D Image Segmentation",
+    "authors": ["K.C.L. Wong","H. Wang","T. Syeda-Mahmood"],
+    "year": 2026,
+    "venue": "IEEE Transactions on Medical Imaging",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "3d segmentation",
+      "neural operator",
+      "medical imaging"
+    ]
+  },
+  {
+    "id": "ijcv-survey-multimodal-2024",
+    "title": "Multimodal Machine Learning in Image-Based and Clinical Biomedicine: Survey and Prospects",
+    "authors": ["E. Warner","J. Lee","W. Hsu","T. Syeda-Mahmood","C.E. Kahn","O. Gevaert","A. Rao"],
+    "year": 2024,
+    "venue": "International Journal of Computer Vision",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Multimodal AI (ML/NLP/Computer Vision)",
+    "topics": [
+      "multimodal learning",
+      "medical imaging",
+      "survey"
+    ]
+  },
+  {
+    "id": "ai-vs-radiologists-jamia-2020",
+    "title": "Artificial Intelligence versus Entry-level Radiologists for Full-fledged Preliminary Read of Frontal AP Chest Radiographs: A Comparative Study",
+    "authors": ["J. Wu","K.C.L. Wong","Y. Gur","N. Ansari","A. Karargyris","A. Sharma","M. Morris","B. Sabury","H. Ahmad","O. Boyko","A. Syed","A. Jadhav","H. Wang","A. Pillai","S. Kashyap","M. Moradi","T. Syeda-Mahmood"],
+    "year": 2020,
+    "venue": "JAMIA",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "chest x-ray",
+      "clinical evaluation",
+      "radiology ai"
+    ]
+  },
+  {
+    "id": "digital-twins-frontiers-2022",
+    "title": "Exploring approaches for predictive cancer patient digital twins: Opportunities for collaboration and innovation",
+    "authors": ["E. Stahlberg","M. Abdel-Rahman","B. Aguilar","A. Asadpoure","R. Beckman","L. Borkon","J. Bryan","C.M. Cebulla","Y.H. Chang","A. Chatterjee","J. Deng"],
+    "year": 2022,
+    "venue": "Frontiers in Digital Health",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "digital twins",
+      "oncology",
+      "healthcare innovation"
+    ]
+  },
+  {
+    "id": "nature-medicine-digital-twins-2021",
+    "title": "Digital twins for predictive oncology will be a paradigm shift for precision cancer care",
+    "authors": ["T. Hernandez-Boussard","P. Macklin","E.J. Greenspan","A.L. Gryshuk","E. Stahlberg","T. Syeda-Mahmood","I. Shmulevich"],
+    "year": 2021,
+    "venue": "Nature Medicine",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "digital twins",
+      "precision oncology",
+      "healthcare ai"
+    ]
+  },
+  {
+    "id": "jacr-bigdata-radiology-2018",
+    "title": "Role of Big Data and Machine Learning in Diagnostic Decision Support in Radiology",
+    "authors": ["T. Syeda-Mahmood"],
+    "year": 2018,
+    "venue": "Journal of the American College of Radiology",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "radiology",
+      "machine learning",
+      "decision support"
+    ]
+  },
+  {
+    "id": "medical-image-analysis-2018-unbalanced-data",
+    "title": "Building medical image classifiers with very unbalanced and limited data using segmentation networks",
+    "authors": ["K.C.L. Wong", "T. Syeda-Mahmood", "M. Moradi"],
+    "year": 2018,
+    "venue": "Medical Image Analysis",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "medical image classification",
+      "data imbalance",
+      "segmentation networks"
+    ]
+  },
+  {
+    "id": "fast-anatomy-segmentation-2018",
+    "title": "Fast Anatomy Segmentation by Combining Coarse Scale Multi-Atlas Label Fusion with Fine Scale Corrective Learning",
+    "authors": ["H. Wang", "D. Kakrania", "H. Tang", "P. Prasanna", "T. Syeda-Mahmood"],
+    "year": 2018,
+    "venue": "Computerized Medical Imaging and Graphics",
+    "type": "journal",
+    "venue_category": "Journal",
+    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+    "topics": [
+      "anatomy segmentation",
+      "multi-atlas fusion",
+      "medical imaging"
+    ]
+  }
+]
