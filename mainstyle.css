@@ -88,10 +88,9 @@ body {
 
 .container {
     max-width: 1100px;
-    margin: auto;
-    padding: 30px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
 /* HERO */
 .home .hero {
     padding: 60px 0;
