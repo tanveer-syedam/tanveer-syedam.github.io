@@ -1,277 +1,869 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="description" content="Tanveer Syeda-Mahmood Home Page">
-<meta name="author" content="Tanveer Syeda-Mahmood">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Tanveer Syeda-Mahmood Home Page</title>
- <!-- JSON-LD structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tanveer Syeda-Mahmood",
-    "url": "https://tanveer-syedam.github.io/",
-    "sameAs": [
-      "https://research.ibm.com/people/tanveer-syeda-mahmood",
-      "https://www.linkedin.com/in/tanveer-syeda-mahmood-09297224/",
-      "https://scholar.google.com/citations?user=Ytks8n0AAAAJ&hl=en",
-      "https://en.wikipedia.org/wiki/Tanveer_Syeda-Mahmood"
-    ],
-    "jobTitle": "Adjunct Professor, IBM Fellow, Chief Scientist",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Stanford University"
-    }
-  }
-  </script>
+<title>Talks | Tanveer Syeda-Mahmood</title>
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | Tanveer Syeda-Mahmood</title>
-<meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="About">
-<meta name="author" content="Joseph E. Gonzalez">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="About">
-<meta property="og:description" content="About">
-<meta property="og:site_name" content="Joseph E. Gonzalez">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="About">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Tanveer Syeda-Mahmood"},"description":"About","headline":"About","name":"Tanveer Syeda-Mahmood","url":"https://profiles.stanford.edu/tanveer-syeda"}</script>
-<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="mainstyle.css">
 
+<style>
+/* =========================================
+   TALKS PAGE
+   Uses the existing site styling from
+   mainstyle.css and only adds talk-specific
+   layout elements.
+   ========================================= */
 
-<link rel="stylesheet" href="sitefiles/custom.css">
-<script src="sitefiles/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
-
-<script src="sitefiles/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-<script src="sitefiles/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-    
-<!--[if lt IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
-<![endif]-->
-
-  </head><body>
-    <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="research.html">Research</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" href="software.html">Software/Datasets</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" href="publications.html">Publications</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="talks.html">Talks/Lectures</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-       <!--  <a class="navbar-brand" href="https://profiles.stanford.edu/tanveer-syeda">Stanford Page</a>
-       -->     
-       </ul>
-    </div>
-  </nav>
-</header> 
-    
-    <main role="main">
-      
-      <div class="container course_content">
-        <script src="sitefiles/scripts.js"></script>
-
-<div style="overflow: hidden;">
-	<style>
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+.talk-intro {
+  max-width: 850px;
+  margin-bottom: 40px;
 }
 
-td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
+.talk-intro p {
+  color: #444;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+/* Talk list */
 
-tr:hover {background-color: #ddd;}
+.talk-list {
+  margin-top: 25px;
+}
 
-th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
+.talk-item {
+  padding: 28px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.talk-item:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.talk-year {
+  color: #777;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.talk-title {
+  margin: 0 0 6px 0;
+  font-size: 1.35em;
+}
+
+.talk-meta {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.talk-type {
+  display: inline-block;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 7px;
+  margin-bottom: 10px;
+}
+
+.talk-description {
+  max-width: 850px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.talk-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.talk-links a {
+  font-size: 0.95em;
+}
+
+/* Featured talk */
+
+.featured-talk {
+  background: #f7f7f7;
+  padding: 28px;
+  border-radius: 6px;
+  margin: 25px 0 50px 0;
+}
+
+.featured-talk .talk-title {
+  font-size: 1.5em;
+}
+
+/* Filters */
+
+.talk-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 25px 0 35px 0;
+}
+
+.talk-filter {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.talk-filter:hover,
+.talk-filter.active {
+  background: #222;
   color: white;
+  border-color: #222;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .featured-talk {
+    padding: 20px;
+  }
+
+  .talk-item {
+    padding: 22px 0;
+  }
+
+  .talk-links {
+    gap: 12px;
+  }
+
 }
 </style>
-<h3> Browse by years </h3>
-<table>
-<tr><td><a href="pub2025.html#2025">2025</a></td><td>  <a href="pub2025.html#2024">2024</a> </td><td><a href="pub2025.html#2023">  2023</a></td>  <td> <a href=pub2025.html#2022">2022</a></td><td><a href="pub2025.html#2021">   2021</a> </td><td> <a href="pub2025.html#2020"> 2020</a> </td><td><a href="pub2025.html#2019"> 2019 </a></td><td> <a href="pub2025.html#2018"> 2018</a>  </td> <td><a href="pub2025.html#2017">2017</a></td><td> <a href="pub2025.html#2016"> 2016</a></td> </tr>
-<!-- <tr><td><a href="pub2015.html#2015">2015</a></td><td>  <a href="pub2015.html#2014">2014</a> </td><td><a href="pub2015.html#2013">  2013</a></td>  <td> <a href="pub2015.html#2012">2012</a></td><td><a href="pub2015.html#2011">   2011</a> </td><td> <a href="pub2015.html#2010"> 2010</a> </td><td><a href="pub2015.html#2009"> 2009 </a></td><td> <a href="pub2015.html#2088"> 2008</a>  </td> <td><a href="pub2015.html#2007">2007</a></td><td> <a href="pub2015.html#2006"> 2006</a></td> </tr>
-<tr><td><a href="pub2005.html#2015">2005</a></td><td>  <a href="pub2005.html#2004">2004</a> </td><td><a href="pub2005.html#2003">  2003</a></td>  <td> <a href="pub2005.html#2002">2002</a></td><td><a href=pub2005.html#2001">   2001</a> </td><td> <a href="pub2005.html#2000"> 2000</a> </td><td><a href="pub2005.html#1999"> 1999 </a></td><td> <a href="pub2005.html#1998"> 1998</a>  </td> <td><a href="pub2005.html#1997">1997</a></td><td> <a href="pub2005.html#1996"> 1996</a></td> </tr>
-<tr><td><a href="pub1985.html#1995">1995</a></td><td>  <a href="pub1985.html#1994">1994</a> </td> <td>  <a href="pub1985.html#1993">1993</a></td><td>  <a href="pub1985.html#1992">1992</a> </td><td>  <a href="pub1985.html#1991">1991</a> </td><td>  <a href="pub1985.html#1990">1990</a> </td><td>  <a href="pub1985.html#1989">1989</a> </td><td>  <a href="pub1985.html#1988">1988</a> </td><td>  <a href="pub1985.html#1987">1987</a> </td><td>  <a href="pub1985.html#1986">1986</a> </td>
-</tr> -->
-</table>
-<hr>
 
-<h3> Browse by Topics </h3>
-<table>
+</head>
 
-<tr>
-<td> Data and AI</td><td> Computer Vision</td> <td> Memory models </td> <td> Representation learning</td><td> Vector compression </td><td> Knowledge representation & Semantic Web</td> <td> Document analysis</td><td>Multimedia Search & Retrieval</td><td>Speech signal processing</td></tr>
-<tr><td> Healthcare AI</td><td><a href="research.html#cancer" >Multimodal fusion</a> </td> <td> <a href="research.html#cancer" >Digital twins</a> </td> <td> <a href="research.html#chest" >Chest X-rays</a></td> <td> <a href="research.html#interventional" >Interventional AI</a></td> <td><a href="research.html#cardio" >Cardiovascular imaging</a></td> <td><a href="research.html#brain" > Brain imaging</a> </td> <td> <a href="research.html#cancer" >Cancers</a></td><td> <a href="research.html#cardio" >Clinical decision support</a> </td></tr>
-<tr>
-</table>
+<body>
 
+<!-- =========================================
+     NAVIGATION
+     ========================================= -->
+
+<div class="navbar">
+
+  <div class="logo" onclick="window.location.href='index.html'">
+    Tanveer Syeda-Mahmood
+  </div>
+
+  <div class="nav-links">
+
+    <a href="index.html#about">About</a>
+    <a href="index.html#focus">Focus</a>
+    <a href="index.html#impact">Impact</a>
+    <a href="index.html#research">Research</a>
+
+    <a href="publications.html">Publications</a>
+
+    <a href="talks.html" class="active">Talks</a>
+
+    <a href="index.html#products">Products</a>
+    <a href="index.html#datasets">Datasets</a>
+    <a href="index.html#executive-brief">Leadership Brief</a>
+    <a href="index.html#contact">Contact</a>
+
+  </div>
 
 </div>
 
 
+<div class="container">
 
+<!-- =========================================
+     HEADER
+     ========================================= -->
+
+<section>
+
+  <h1>Talks</h1>
+
+  <div class="talk-intro">
+
+    <p>
+      Keynotes, plenary lectures, invited talks, tutorials, and other
+      presentations spanning artificial intelligence, medical imaging,
+      healthcare AI, multimodal systems, and trustworthy AI.
+    </p>
+
+    <p>
+      Selected presentations and accompanying slides are collected here
+      as a record of research ideas, technical directions, and perspectives
+      shared with academic, industry, and healthcare communities.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FEATURED / RECENT TALK
+     ========================================= -->
+
+<section>
+
+  <h2>Most Recent Talk</h2>
+
+  <div class="featured-talk">
+
+    <div class="talk-type">
+      Invited Talk
+    </div>
+
+    <h3 class="talk-title">
+     Beyond Generative AI: The Rise of Verification for Clinical Safety in Radiology AI
+    </h3>
+
+    <div class="talk-meta">
+      August 2026 · Dept. of Electrical Engineering, University of British Columbia, Vancouver BC, Canada / Invited Talk
+    </div>
+
+    <p class="talk-description">
+      The next frontier of high-stakes AI is not only generating answers,
+      but ensuring their correctness. This talk explores the transition
+      from generation-centric AI toward verification-centric systems
+      capable of checking, explaining, and improving AI outputs demonstrated in the domain of radiology AI on chest X-ray image interpretation.
+    </p>
+
+    <div class="talk-links">
+
+      <!-- Replace # with actual links -->
+
+      <a href="slides/UBCPres26.pdf" target="_blank">
+        Slides →
+      </a>
+
+      <!-- <a href="#" target="_blank">
+        Video →
+      </a>
+
+      <a href="#" target="_blank">
+        Event →
+      </a> -->
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FILTERS
+     ========================================= -->
+
+<!-- <section>
+
+  <div class="talk-filters">
+
+    <button class="talk-filter active" data-filter="all">
+      All
+    </button>
+
+    <button class="talk-filter" data-filter="keynote">
+      Keynotes
+    </button>
+
+    <button class="talk-filter" data-filter="plenary">
+      Plenary
+    </button>
+
+    <button class="talk-filter" data-filter="invited">
+      Invited Talks
+    </button>
+
+    <button class="talk-filter" data-filter="tutorial">
+      Tutorials
+    </button>
+
+  </div>
+
+</section> -->
+
+
+<!-- =========================================
+     2026
+     ========================================= -->
+
+<section>
+
+<h2>2026</h2>
+
+<div class="talk-list">
+ <article class="talk-item" data-type="tutorial">
+
+    <div class="talk-year">
+     September 2026
+    </div>
+
+    <div class="talk-type">
+      Tutorial
+    </div>
+
+    <h3 class="talk-title">
+      From Foundational to Multimodal Models for Medical Imaging
+    </h3>
+
+    <div class="talk-meta">
+      MICCAI 2026
+    </div>
+
+    <p class="talk-description">
+      Tutorial covering foundational models, multimodal models,
+      and emerging approaches for medical imaging and healthcare. Jointly presented with Yunsoo Kim and Ismail Bin Ayed.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="https://sites.google.com/view/miccai-2026-tutorial"
+         target="_blank">
+        Tutorial →
+      </a>
+
+      <!-- <a href="#"
+         target="_blank">
+        Slides → 
+      </a> -->
+
+    </div>
+
+  </article>
+
+  <article class="talk-item" data-type="keynote">
+
+    <div class="talk-year">
+      August 2026
+    </div>
+
+    <div class="talk-type">
+     Invited Talk
+    </div>
+
+    <h3 class="talk-title">
+     Beyond Generative AI: The Rise of Verification for Clinical Safety in Radiology AI
+    </h3>
+
+    <div class="talk-meta">
+    Dept. of Electrical Engineering, University of British Columbia, Vancouver BC, Canada 
+    
+    </div>
+
+    <p class="talk-description">
+     Generative AI is rapidly transforming radiology, but in high-stakes clinical settings, generating a plausible report is not enough, we need to know whether it is correct. This talk introduces Verification AI, a new class of domain-specific models designed to detect, measure, correct, and ultimately prevent errors in AI-generated clinical reports.  Drawing upon recent work of students and collaborators appearing in conferences such as CVPR,  MICCAI, and NeurIPS,  I will highlight approaches for fine-grained, location-grounded verification and automated correction of chest X-ray reports, including fact-checking discriminative models and retrieval-augmented LLM judges. Together these advances point to a fundamental shift in clinical AI from generating text to ensuring its correctness, thus creating a critical layer of trust and safety for the next generation of healthcare AI.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="slides/UBCPres26.pdf" target="_blank">Slides →</a>
+<!--   
+      <a href="#" target="_blank">Video →</a>
+      <a href="#" target="_blank">Event →</a> -->
+
+    </div>
+
+  </article>
+
+  <article class="talk-item" data-type="keynote">
+
+    <div class="talk-year">
+      January 2026
+    </div>
+
+    <div class="talk-type">
+     Keynote Talk
+    </div>
+
+    <h3 class="talk-title">
+     Multimodal Fusion for Disease Understanding
+    </h3>
+
+    <div class="talk-meta">
+    Center for Brain Research, Indian Institute of Science/ Distinguished Visitor Program Lecture
+    
+    </div>
+
+    <p class="talk-description">
+    Understanding the human brain—arguably the most complex biological system—demands integrative frameworks that bridge molecular, structural, functional, and clinical levels of observation. This in turn requires integrating diverse data types including genomic, neuroimaging, and clinical data, which has traditionally been addressed using early, mid, or late fusion methods. Through long-term academic–industrial collaborations, Dr Syeda-Mahmood’s group has been developing novel neural architectures tailored for multimodal fusion. They have applied these architectures to model fusion across diverse diseases ranging from cancer and cardiac diseases to neurodegenerative disorders such as Alzheimer’s disease. Dr Syeda-Mahmood will present a range of approaches, from statistical fusion methods such as sparse canonical correlation analysis to generalized neural fusion models based on multiplexed and multi-layer graph neural networks. She will highlight the translational impact of these methods through a recent study that identified 23 genes associated with cardiac morphology, illustrating the broader potential of multimodal fusion to drive biologically meaningful discovery in brain research and precision neuroscience.  
+    </p>
+
+    <div class="talk-links">
+
+      <a href="slides/CBRTalk.pdf" target="_blank">Slides →</a>
+<!--    
+      <a href="#" target="_blank">Video →</a> -->
+      <a href="https://cbr-iisc.ac.in/events-dvp-lecture-2026/" target="_blank">Event →</a> 
+
+    </div>
+
+  </article>
+
+
+ 
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     2025
+     ========================================= -->
+
+<section>
+
+<h2>2025</h2>
+
+<div class="talk-list">
+<article class="talk-item" data-type="invited">
+
+    <div class="talk-year">
+     December 2025
+    </div>
+
+    <div class="talk-type">
+      Oral Presentation
+    </div>
+
+    <h3 class="talk-title">
+     SemCLIP: A Semantic Memory-Aligned Vision Language Modeltems
+    </h3>
+
+    <div class="talk-meta">
+     NeurIPS Workshop: UniReps: Unifying Representations in Neural Models/ Oral Presentation
+    </div>
+
+    <p class="talk-description">
+    Vision-language models (VLM) bring image and textual representations close together in a joint embedding space, which is useful for tagging and retrieval from content stores. However such associations are not very stable in that a synonymous textual query does not retrieve the same set of images or with a high degree of overlap. This is due to the absence of linkages between semantically related concepts in vision-language models. In contrast, the episodic memory store in the brain has linkages to the semantic conceptual memory subsystem which helps in both the formation and recall of memories. In this paper, we exploit this paradigm to link a VLM to a semantic memory thereby producing a new semantic vision-language model called SemCLIP. Specifically, we develop a semantic memory model for the language of object-naming nouns reflecting their semantic similarity. We then link a vision language model to the semantic memory model through a semantic alignment transform. This leads to a richer and more stable understanding of the concepts by bringing synonymous visual concepts and their associated images closer. Both the semantic memory model and the alignment transform can be learned from word knowledge sources thus avoiding large-scale retraining of VLMs from real-world image-text pairs. The resulting model is shown to outperform existing embedding models for semantic similarity and downstream tasks of retrieval on multiple datasets.
+      </p>
+
+    <div class="talk-links">
+
+      <a href="slides/UNiReps2025pdf" target="_blank">
+        Slides →
+      </a>
 <!-- 
-<h2 id="news">News</h2>
-
-<ul>
-  <li>
-    <p>We release <a href="https://gorilla.cs.berkeley.edu/">Gorilla Large Language Model</a> 🦍 LLMs need to interact with the world through APIs, and we teach LLMs to write APIs calls accurately without hallucination.</p>
-  </li>
-  <li>
-    <p>POET is featured by <a href="https://spectrum.ieee.org/neural-network-training">IEEE Spectrum</a>! The first demonstration on how to train SOTA ML models on smartphones and resource constrained edge devices.</p>
-  </li>
-</ul> -->
-
-<!-- <h2 id="recent-projects">Recent projects</h2>
-
-<p>See <a href="https://scholar.google.com/citations?user=B96GkdgAAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a> for an up-to-date list of publications.</p>
-
-<ul>
-  <li><a href="">AI-SQL</a></li>
-  <li><a href="https://arxiv.org/abs/2311.03285">S-LoRA</a></li>
-  <li><a href="https://github.com/sgl-project/sglang">SG-Lang</a></li>
-  <li><a href="https://understanding-visual-datasets.github.io/VisDiff-website/">VisDiff</a></li>
-  <li><a href="https://chat.lmsys.org/">Chatbot Arena</a></li>
-  <li><a href="https://gorilla.cs.berkeley.edu/">Gorilla</a></li>
-  <li><a href="https://research.memgpt.ai/">MemGPT</a></li>
-  <li><a href="https://vllm.ai/">vLLM</a></li>
-  <li><a href="https://github.com/skyplane-project/skyplane">Skyplane</a> + <a href="https://www.usenix.org/conference/nsdi24/presentation/wooders">Cloudcast</a></li>
-  <li><a href="https://poet.cs.berkeley.edu/">POET</a></li>
-  <li><a href="https://rise.cs.berkeley.edu/projects/erdos/">ERDOS</a></li>
-</ul> -->
-
-<!-- <h2 id="current-graduate-students">Current Graduate Students</h2>
-<ul>
-  <li><a href="https://sukritkalra.github.io/">Sukrit Kalra</a></li>
-  <li><a href="https://www.linkedin.com/in/tianjun-zhang-333bb2126">Tianjun Zhang</a></li>
-  <li><a href="https://people.eecs.berkeley.edu/~kevinlin/">Kevin Lin</a></li>
-  <li><a href="https://people.eecs.berkeley.edu/~cpacker/">Charles Packer</a></li>
-  <li><a href="https://shishirpatil.github.io/">Shishir Patil</a></li>
-  <li><a href="https://suziepetryk.com/">Suzanne Petryk</a></li>
-  <li><a href="https://pschafhalter.com/">Peter Schafhalter</a></li>
-  <li><a href="http://lmzheng.net/">Lianmin Zheng</a></li>
-  <li><a href="http://sarahwooders.github.io/">Sarah Wooders</a></li>
-  <li><a href="https://scholar.google.com/citations?user=sSvMwicAAAAJ&amp;hl=en">Yu Gai</a></li>
-  <li><a href="https://dblp.org/pid/185/9249.html">Eyal Sela</a></li>
-  <li><a href="https://www.linkedin.com/in/justin-wong-23155411b/">Justin Wong</a></li>
-  <li><a href="https://www.lisabdunlap.com/">Lisa Dunlap</a></li>
-  <li><a href="https://simon-mo.com/">Simon Mo</a></li>
-  <li><a href="https://www.linkedin.com/in/asim-biswal/">Asim Biswal</a></li>
-  <li><a href="">Shiyi Cao</a></li>
-  <li><a href="">Dacheng Li</a></li>
-</ul>
-
-<h4 id="former-students-and-post-docs">Former Students and Post-docs</h4>
-
-<ul>
-  <li><a href="https://people.eecs.berkeley.edu/~kandasamy/">Kirthevasan Kandasamy</a></li>
-  <li><a href="https://sites.google.com/site/yangyaoqingcmu/">Yaoqing Yang</a></li>
-  <li><a href="https://people.eecs.berkeley.edu/~nathanp/">Nathan Pemberton</a></li>
-  <li><a href="https://www.linkedin.com/in/daniel-rothchild-45510b38/">Daniel Rothchild</a></li>
-  <li><a href="https://bthananjeyan.github.io/">Brijen Thananjeyan</a></li>
-  <li><a href="http://alvinwan.com/">Alvin Wan</a></li>
-  <li><a href="http://parasjain.com/">Paras Jain</a></li>
-  <li><a href="https://www.linkedin.com/in/debbie-liang/">Debbie Liang</a></li>
-  <li><a href="https://www.linkedin.com/in/daiyaanarfeen">Daiyaan Arfeen</a></li>
-  <li><a href="https://github.com/bellettif">Francios Belletti</a></li>
-  <li><a href="http://people.eecs.berkeley.edu/~jianfei/">Jianfei Chen</a></li>
-  <li><a href="https://dancrankshaw.com/">Daniel Crankshaw</a></li>
-  <li><a href="https://www.linkedin.com/in/amandhar/">Aman Dhar</a></li>
-  <li><a href="https://github.com/RehanSD">Rehan Durrani</a></li>
-  <li><a href="https://www.linkedin.com/in/edward-h-fang">Edward Fang</a></li>
-  <li><a href="https://vlad17.github.io/about">Vlad Feinberg</a></li>
-  <li><a href="http://noahgolmant.com/">Noah Golmant</a></li>
-  <li><a href="">Daniel Ho</a></li>
-  <li><a href="https://www.linkedin.com/in/weston-hughes-61b153110">Weston Hughes</a></li>
-  <li><a href="http://www.samvitjain.com/">Samvit Jain</a></li>
-  <li><a href="https://data.berkeley.edu/graduate-profile-sona-jeswani">Sona Jeswani</a></li>
-  <li><a href="">Alvin Kao</a></li>
-  <li><a href="https://www.linkedin.com/in/alexyku/">Alexander Ku</a></li>
-  <li><a href="https://scottjlee.github.io/">Scott Lee</a></li>
-  <li><a href="https://www.linkedin.com/in/cathy-li-81068b141/">Cathy Li</a></li>
-  <li><a href="https://www.linkedin.com/in/richardliaw">Richard Liaw</a></li>
-  <li><a href="https://www.linkedin.com/in/yika-yujia-luo-3a835b87">Yika Yujia Luo</a></li>
-  <li><a href="http://www.mong.life/about-me/">Mong Ng</a></li>
-  <li><a href="https://www.linkedin.com/in/ashwineepanda">Ashwinee Panda</a></li>
-  <li><a href="https://www.linkedin.com/in/devinpetersohn/">Devin Petersohn</a></li>
-  <li><a href="https://www.vikrams.io/">Vikram Sreekanti</a></li>
-  <li><a href="https://www.linkedin.com/in/hsubbaraj">Hari Subbaraj</a></li>
-  <li><a href="">Victor Sun</a></li>
-  <li><a href="https://www.cc.gatech.edu/people/alexey-tumanov">Alexey Tumanov</a></li>
-  <li><a href="https://www.linkedin.com/in/nikitavemuri">Nikita Vemuri</a></li>
-  <li><a href="https://people.eecs.berkeley.edu/~xinw/">Xin Wang</a></li>
-  <li><a href="https://www.linkedin.com/in/mattawright">Matthew Wright</a></li>
-  <li><a href="http://cgwu.io/">Chenggang Wu</a></li>
-  <li><a href="https://floraxue.github.io/index.html">Flora Xue</a></li>
-  <li><a href="https://people.eecs.berkeley.edu/~neerajay/">Neeraja Yadwadkar</a></li>
-  <li><a href="">Andy Yan</a></li>
-  <li><a href="https://www.linkedin.com/in/corey-zumar-0a770982">Corey Zumar</a></li>
-</ul>
-
-<h2 id="research-opportunities-for-undergraduate-students">Research Opportunities for Undergraduate Students</h2>
-
-<p>We are also looking for motivated undergraduate students who would 
-like to get involved in doing cutting edge research.  If you are an 
-undergraduate at Berkeley and are interested in getting involved in 
-research please fill out the <a href="https://dare.berkeley.edu/">DARE Application</a>.</p>
-
-<h2 id="funding">Funding</h2>
-
-<p>This research is funded by the RISE Lab NSF Expedition grant, NSF CAREER Award, and the consortium of <a href="https://sky.cs.berkeley.edu/sponsors/">industrial sponsors</a>.</p>
-
-      </div>
-    </main>
-
-    <footer class="container">
-  <p class="float-right"><a href="#">Back to top</a></p>
-  <p>
-    © 2019 UC Berkeley 
-  </p>
-
-
-  <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p> 
-
-</footer> 
--->
+      <a href="#" target="_blank">
+        Video →
+      </a> -->
+      <a href="https://neurips.cc/virtual/2025/loc/san-diego/127217" target="_blank">Event →</a> 
 
 
 
+    </div>
 
+  </article>
+<article class="talk-item" data-type="invited">
+
+    <div class="talk-year">
+     October 2025
+    </div>
+
+    <div class="talk-type">
+      keynote Talk
+    </div>
+
+    <h3 class="talk-title">
+     Neuro-Inspired Memories: Driving Next-Generation AI Models for Computer Storage Systems
+    </h3>
+
+    <div class="talk-meta">
+     IEEE BioCAS Conference / Keynote Talk
+    </div>
+
+    <p class="talk-description">
+      Neuroscience has been a building block for artificial intelligence since this field began, and as recognized by the recent Nobel prize in Physics for the work on Hopfield networks. Building computational models of different brain systems can give us new insight into the development of next generation computer systems. At IBM Research, we are pioneering one such ambitious project to develop a computational model of human declarative memory system in the brain. This is intended to serve both as a virtual memory prosthetics for memory-impaired patients and to guide the design of next-generation computer storage systems. In this talk I will describe our emerging work on new neural architectures for semantic and episodic memories as well as representation and encoding methods in the tri-synaptic circuit of the hippocampus. Specifically, I will present our latest work on developing a foundational model for knowledge to emulate human semantic and episodic memories using cross-linked neural embeddings for visual and language concepts. I will also describe a new neural model of storage and retrieval called cross-modal Hopfield encoding networks which make the Hopfield networks more practical for use in computer systems. I will discuss how these new neural architectures are beginning to influence IBM’s hardware accelerated AI/ML infrastructure solutions including the recently announced IBM content-aware storage system jointly with NVIDIA that convert passive storage devices to active content-understanding systems.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="slides/BioCASTalk.pdf" target="_blank">
+        Slides →
+      </a>
+<!-- 
+      <a href="#" target="_blank">
+        Video →
+      </a> -->
+      <a href="https://2025.ieee-biocas.org/keynotes/" target="_blank">Event →</a> 
+
+
+
+    </div>
+
+  </article>
+  <article class="talk-item" data-type="tutorial">
+
+    <div class="talk-year">
+      2025
+    </div>
+
+    <div class="talk-type">
+      Tutorial
+    </div>
+
+    <h3 class="talk-title">
+      From Foundational to Multimodal Models for Medical Imaging
+    </h3>
+
+    <div class="talk-meta">
+      MICCAI 2025
+    </div>
+
+    <p class="talk-description">
+      An overview of foundational and multimodal models and their
+      applications to medical imaging.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="https://sites.google.com/view/miccai-2025-tutorial"
+         target="_blank">
+        Tutorial →
+      </a>
+
+      <a href="#"
+         target="_blank">
+        Slides →
+      </a>
+
+    </div>
+
+  </article>
 
 
   
 
 
-</body></html>
+</div>
+
+</section>
+
+<!-- 
+<!-- =========================================
+     2024
+     ========================================= -->
+<!-- 
+<section>
+
+<h2>2024</h2>
+
+<div class="talk-list">
+
+
+  <article class="talk-item" data-type="tutorial">
+
+    <div class="talk-year">
+      2024
+    </div>
+
+    <div class="talk-type">
+      Tutorial
+    </div>
+
+    <h3 class="talk-title">
+      Foundational Models for Medical Imaging
+    </h3>
+
+    <div class="talk-meta">
+      MICCAI 2024
+    </div>
+
+    <p class="talk-description">
+      Tutorial on the development and application of foundation
+      models to medical imaging.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="https://sites.google.com/view/miccai-2024-tutorial"
+         target="_blank">
+        Tutorial →
+      </a>
+
+      <a href="#" target="_blank">
+        Slides →
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <article class="talk-item" data-type="invited">
+
+    <div class="talk-year">
+      2024
+    </div>
+
+    <div class="talk-type">
+      Invited Talk
+    </div>
+
+    <h3 class="talk-title">
+      Multimodal Foundation Models and Healthcare AI
+    </h3>
+
+    <div class="talk-meta">
+      Invited Lecture
+    </div>
+
+    <p class="talk-description">
+      Discussion of multimodal foundation models and their role
+      in building intelligent healthcare systems.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="#" target="_blank">
+        Slides →
+      </a>
+
+      <a href="#" target="_blank">
+        Video →
+      </a>
+
+    </div>
+
+  </article> -->
+
+
+  <!-- <article class="talk-item" data-type="plenary">
+
+    <div class="talk-year">
+      2024
+    </div>
+
+    <div class="talk-type">
+      Plenary
+    </div>
+
+    <h3 class="talk-title">
+      Artificial Intelligence in Medical Imaging
+    </h3>
+
+    <div class="talk-meta">
+      RSNA
+    </div>
+
+    <p class="talk-description">
+      Perspectives on the evolution of artificial intelligence
+      in medical imaging, from computer vision and clinical
+      decision support to modern foundation and generative models.
+    </p>
+
+    <div class="talk-links">
+
+      <a href="#" target="_blank">
+        Slides →
+      </a>
+
+      <a href="#" target="_blank">
+        Video →
+      </a>
+
+    </div>
+
+  </article> 
+
+
+</div>
+
+</section> -->
+
+
+<!-- =========================================
+     SPEAKING PROFILE
+     ========================================= -->
+
+<section>
+
+<h2>Speaking</h2>
+
+<div class="grid">
+
+  <div class="card">
+
+    <h3>Keynotes</h3>
+
+    <p>
+      18+ keynote lectures across AI, computer vision,
+      medical imaging, and healthcare.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h3>Plenary Talks</h3>
+
+    <p>
+      6 plenary lectures addressing emerging directions
+      in AI and healthcare technology.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h3>Invited Talks</h3>
+
+    <p>
+      25+ invited talks at universities, research institutions,
+      conferences, and industry organizations worldwide.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h3>Tutorials</h3>
+
+    <p>
+      Tutorials and advanced training programs covering
+      foundation models, multimodal AI, and medical imaging.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     SPEAKING TOPICS
+     ========================================= -->
+
+<section>
+
+<h2>Selected Topics</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Verification AI</h3>
+    <p>
+      Moving AI from generation toward verification,
+      factuality, reliability, and trustworthy deployment.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Multimodal AI</h3>
+    <p>
+      Multimodal foundation models, retrieval,
+      memory, and intelligent systems.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Healthcare AI</h3>
+    <p>
+      Clinical AI, medical imaging, decision support,
+      precision AI, and healthcare transformation.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>AI Strategy</h3>
+    <p>
+      Translating research advances into enterprise
+      platforms, products, and organizational impact.
+    </p>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT
+     ========================================= -->
+
+<section>
+
+<h2>Speaking Inquiries</h2>
+
+<div class="card">
+
+<p>
+I welcome invitations to speak on AI strategy, scientific direction,
+healthcare AI, multimodal foundation models, verification AI,
+and the translation of research into real-world systems.
+</p>
+
+<p>
+<a href="mailto:tanveersyeda1@stanford.edu">
+tanveersyeda1@stanford.edu
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 Tanveer Syeda-Mahmood
+</footer>
+
+</div>
+
+
+<!-- =========================================
+     FILTER SCRIPT
+     ========================================= -->
+
+<script>
+
+const filters = document.querySelectorAll(".talk-filter");
+const talks = document.querySelectorAll(".talk-item");
+
+filters.forEach(filter => {
+
+  filter.addEventListener("click", function() {
+
+    const selected = this.dataset.filter;
+
+    filters.forEach(button => {
+      button.classList.remove("active");
+    });
+
+    this.classList.add("active");
+
+    talks.forEach(talk => {
+
+      if (
+        selected === "all" ||
+        talk.dataset.type === selected
+      ) {
+        talk.style.display = "";
+      } else {
+        talk.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
