@@ -4,7 +4,7 @@ let PUBLICATIONS = [];
    LOAD DATA
 ------------------------------*/
 
-fetch("publications.json")
+fetch("publications.json", { cache: "no-store" })
   .then(res => res.json())
   .then(data => {
     PUBLICATIONS = data;
@@ -42,13 +42,22 @@ function initPage() {
     if (view === "year") {
         renderGroupedScalar(container, "year", true);
     }
-    else if (view === "topic") {
+    else if (view === "topic" || view === "topics") {
         const grouped = groupByTopics(PUBLICATIONS);
         renderGroupedObject(container, grouped);
     }
     else {
         renderFlat(container);
     }
+}
+
+// Within each year, use the explicitly chosen publication order.
+// Papers without an assigned order retain their existing relative order.
+function comparePublications(a, b) {
+  const yearDifference = b.year - a.year;
+  if (yearDifference !== 0) return yearDifference;
+  return (a.display_order ?? Number.MAX_SAFE_INTEGER)
+       - (b.display_order ?? Number.MAX_SAFE_INTEGER);
 }
 
 /* -----------------------------
@@ -115,7 +124,7 @@ function renderGroupedScalar(container, key, sortDesc = false) {
     const ol = section.querySelector("ol");
 
     grouped[k]
-      .sort((a, b) => b.year - a.year)
+      .sort(comparePublications)
       .forEach(pub => {
         ol.insertAdjacentHTML("beforeend", renderPublication(pub));
       });
@@ -142,7 +151,7 @@ function renderGroupedObject(container, grouped) {
     const ol = section.querySelector("ol");
 
     grouped[k]
-      .sort((a, b) => b.year - a.year)
+      .sort(comparePublications)
       .forEach(pub => {
         ol.insertAdjacentHTML("beforeend", renderPublication(pub));
       });
@@ -161,24 +170,6 @@ const CATEGORY_ORDER = {
   "Workshop": 2,
   "Book": 3,
   "Other": 99
-};
-const CONFERENCE_ORDER = {
-  "CVPR": 1,
-  "MICCAI": 2,
-  "IPMI": 3,
-  "ICCV": 4,
-  "ECCV": 5,
-  "NeurIPS": 6,
-  "ICML": 7,
-  "AAAI": 8,
-  "ISBI": 9,
-  "SPIE":10,
-  "IJCAI": 11,
-  "BMVC": 12,
-  "MIDL": 13,
-  "FIMH":14,
-  "ACCV":15,
-  "Computers in Cardiology":16
 };
 function renderVenuePage() {
 
@@ -206,7 +197,9 @@ function renderVenueGroup(groupName, container) {
     container.innerHTML = "";
 
     const pubs = PUBLICATIONS.filter(
-        p => p.venue_group === groupName
+        p => Array.isArray(p.venue_group)
+            ? p.venue_group.includes(groupName)
+            : p.venue_group === groupName
     );
 
     const byCategory = groupBy(pubs, "venue_category");
@@ -222,21 +215,7 @@ function renderVenueGroup(groupName, container) {
             const ol = document.createElement("ol");
 
             byCategory[category]
-                .sort((a, b) => {
-
-                    // For conferences, sort first by conference importance
-                    if (category === "Conference") {
-                        const oa = CONFERENCE_ORDER[a.venue] ?? 999;
-                        const ob = CONFERENCE_ORDER[b.venue] ?? 999;
-
-                        if (oa !== ob) {
-                            return oa - ob;
-                        }
-                    }
-
-                    // Then newest papers first
-                    return b.year - a.year;
-                })
+                .sort(comparePublications)
                 .forEach(pub => {
                     ol.insertAdjacentHTML(
                         "beforeend",
@@ -293,7 +272,7 @@ function renderVenueGroup(groupName, container) {
 //         const ol = block.querySelector("ol");
 
 //         byCategory[cat]
-//           .sort((a, b) => b.year - a.year)
+//           .sort(comparePublications)
 //           .forEach(pub => {
 //             ol.insertAdjacentHTML("beforeend", renderPublication(pub));
 //           });
@@ -334,7 +313,7 @@ function renderFlat(container) {
   container.innerHTML = "";
 
   PUBLICATIONS
-    .sort((a, b) => b.year - a.year)
+    .sort(comparePublications)
     .forEach(pub => {
       const div = document.createElement("div");
       div.innerHTML = renderPublication(pub);

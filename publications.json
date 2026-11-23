@@ -1,5 +1,35 @@
 [
   {
+    "source_index": 229,
+    "id": "genai4health-2026-retrieval-augmented-verification-xray",
+    "title": "Retrieval-Augmented Verification of Chest X-ray Radiology Reports using COT and Consensus Reasoning in an LLM Judge",
+    "authors": [
+      "Raziuddin Mahmood",
+      "Haile Teshome",
+      "Joshua Adam Rizo",
+      "Vivian Utti",
+      "Tanveer F Syeda-Mahmood"
+    ],
+    "year": 2026,
+    "display_order": 1,
+    "venue": "NeurIPS GenAI4Health - Main Track (accepted)",
+    "type": "conference",
+    "venue_category": "Conference",
+    "venue_group": [
+      "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+      "Multimodal AI (ML/NLP/Computer Vision)"
+    ],
+    "topics": [
+      "Healthcare AI",
+      "Multimodal AI",
+      "chest X-ray",
+      "report verification",
+      "retrieval-augmented generation",
+      "chain-of-thought reasoning",
+      "LLM judge"
+    ]
+  },
+  {
     "source_index": 1,
     "id": "cnn-pediatric-lymphoma-pet-mri-2026",
     "title": "CNN-based detection of pediatric lymphoma on whole body [18F]FDG-PET/MRI",
@@ -492,25 +522,65 @@
     "source_index": 41,
     "id": "miccai-2026-directional-semantic-xray",
     "title": "Learning directional semantic transitions for longitudinal chest X-ray analysis",
-    "authors": ["Z. Hu","Z. Yang","Ge Wang","T. Syeda-Mahmood","A. Burade","M. Kalra","P. Yan"],
+    "authors": [
+      "Z. Hu",
+      "Z. Yang",
+      "Ge Wang",
+      "T. Syeda-Mahmood",
+      "A. Burade",
+      "M. Kalra",
+      "P. Yan"
+    ],
     "year": 2026,
+    "display_order": 2,
     "venue": "MICCAI",
     "type": "conference",
     "venue_category": "Conference",
-    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
-    "topics": ["longitudinal learning","chest X-ray","medical imaging","temporal modeling"]
+    "venue_group": [
+      "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+      "Multimodal AI (ML/NLP/Computer Vision)"
+    ],
+    "topics": [
+      "Healthcare AI",
+      "Multimodal AI",
+      "longitudinal learning",
+      "chest X-ray",
+      "medical imaging",
+      "temporal modeling"
+    ]
   },
   {
     "source_index": 42,
     "id": "miccai-2025-phrase-grounded-fact-checking",
     "title": "Phrase-grounded Fact-checking for Automatically Generated Chest X-ray Reports",
-    "authors": ["R. Mahmood","Diego Machado-Reyes","Joy Wu","Parisa Kaviani","Ken C.L. Wong","Niharika D'Souza","Mannudeep Kalra","Ge Wang","Pingkun Yan","Tanveer Syeda-Mahmood"],
+    "authors": [
+      "R. Mahmood",
+      "Diego Machado-Reyes",
+      "Joy Wu",
+      "Parisa Kaviani",
+      "Ken C.L. Wong",
+      "Niharika D'Souza",
+      "Mannudeep Kalra",
+      "Ge Wang",
+      "Pingkun Yan",
+      "Tanveer Syeda-Mahmood"
+    ],
     "year": 2025,
     "venue": "MICCAI",
     "type": "conference",
     "venue_category": "Conference",
-    "venue_group": "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
-    "topics": ["report generation","fact-checking","radiology NLP","chest X-ray"]
+    "venue_group": [
+      "Healthcare AI (Bio-Medical Imaging/EHR/Informatics)",
+      "Multimodal AI (ML/NLP/Computer Vision)"
+    ],
+    "topics": [
+      "Healthcare AI",
+      "Multimodal AI",
+      "report generation",
+      "fact-checking",
+      "radiology NLP",
+      "chest X-ray"
+    ]
   },
   {
     "source_index": 43,
@@ -905,6 +975,7 @@
     "title": "Phrase-grounded APO for Improving Chest X-ray Report Generation",
     "authors": ["R. Mahmood","T. Syeda-Mahmood"],
     "year": 2026,
+    "display_order": 3,
     "venue": "CVPR",
     "type": "conference",
     "venue_category": "Conference",
@@ -1556,6 +1627,7 @@
     "title": "Automatic correction of generative AI chest X-ray radiology reports",
     "authors": ["R. Mahmood","P.K. Yan","T. Syeda-Mahmood"],
     "year": 2026,
+    "display_order": 4,
     "venue": "IEEE ISBI",
     "type": "conference",
     "venue_category": "Conference",
